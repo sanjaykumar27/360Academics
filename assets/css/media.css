@@ -1,0 +1,42 @@
+@media (max-width: 1024px) {
+  .d-nav nav > ul > li {
+    margin-left: 4px; }
+    .d-nav nav > ul > li > a {
+      padding: 8px 10px; }
+
+  .md-padding {
+    overflow: hidden; } }
+@media (max-width: 767px) {
+  .d-footer {
+    height: auto;
+    position: static;
+    padding-bottom: 10px; }
+    .d-footer ul {
+      float: left;
+      margin-bottom: 10px; }
+
+  .d-login_form {
+    max-width: 95%; }
+
+  .d-header_info .d-main_menu nav ul, .d-header_info .d-top_user {
+    text-align: center; }
+
+  .d-top_user {
+    margin-bottom: 10px; }
+
+  .d-logo img {
+    margin: auto; }
+
+  md-toolbar {
+    min-height: 64px; }
+
+  .d-package_listing {
+    clear: both; }
+    .d-package_listing md-checkbox {
+      width: 100%; }
+
+  .d-listing_toolbar .d-listing_toolbar_title > span {
+    font-size: 16px;
+    padding: 24px 5px 20px 15px; } }
+
+/*# sourceMappingURL=media.css.map */
