@@ -81,8 +81,7 @@
                         <tr>
                             <td>I</td>
                             <td>[ 8:00 - 8:45 ]</td>
-                            <td>English
-                                </td>
+                            <td>English</td>
                             <td>English</td>
                             <td>English</td>
                             <td>English</td>
@@ -149,7 +148,7 @@
                             <td>Science</td>
                             <td>Science</td>
                         </tr>
-                         <tr>
+                        <tr>
                             <td>VII</td>
                             <td>[ 12:40 - 13:20 ]</td>
                             <td>Games</td>
@@ -160,9 +159,60 @@
                             <td>Games</td>
                         </tr>
                     </table>
+                    <md-button style="float: right" data-toggle="modal" data-target="#myModal" class="md-raised md-primary">Show Teacher</md-button>
                 </div>
             </div>
 
+        </div>
+
+        <div class="modal fade" id="myModal" ng-controller="examination">
+            <div class="modal-dialog">
+                <div class="modal-content"> 
+                    <div class="modal-body clearfix">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">Subject Teacher</div>
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                    <table class="table">
+                                        <tr class="info">
+                                            <td>S.no</td>
+                                            <td>Period</td>
+                                            <td>Teacher</td>
+                                            <td>Substitute</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>English</td>
+                                            <td>Name 1</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Hindi</td>
+                                            <td>Name 2</td>
+                                            <td>-</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Games</td>
+                                            <td>Name 3</td>
+                                            <td>Name 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Library</td>
+                                            <td>Name 4</td>
+                                            <td>-</td>
+                                        </tr>
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
         </div>
     </div>
 </div><br><br><br><br><br><br>

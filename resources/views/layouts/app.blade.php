@@ -14,11 +14,11 @@
 
                 <!-- CSS:: FONTS -->
                 <!-- CSS:: FONTS -->
+                <script type="text/javascript" src="{{url('')}}/assets/js/jquery.min.js"></script>   
                 <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/css/font-awesome.min.css"/>  
                 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500" rel="stylesheet"/> 
                 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
                 <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"/>
-                <!-- CSS:: BOOTSTRAP -->	
                 <link rel="stylesheet" href="{{url('')}}/assets/css/bootstrap.min.css">     
 
                     <!-- CSS:: ANGULAR -->  
@@ -30,8 +30,11 @@
                     <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/css/reset.css"/>
                     <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/css/main.css"/> 
                     <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/css/angular-timeline.css"/> 
-                    <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/css/mdPickers.css"/> 
-
+                    <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/css/bootstrap-timepicker.min.css"/> 
+                    
+                    <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/css/ui-cropper.css"/> 
+                    <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/css/intlTelInput.css"/> 
+                    
 
                     <script>
                         window.Laravel = <?php
@@ -162,12 +165,45 @@ echo json_encode([
                                                                         <md-menu-content>           
                                                                             <md-menu-item>
                                                                                 <md-menu>
-                                                                                    <md-button ng-click="$mdOpenMenu()">Time Table</md-button>
+                                                                                    <a class="md-button" ng-click="$mdOpenMenu()">Time Table</a>
                                                                                     <md-menu-content>
                                                                                         <md-menu-item><a class="md-button" href="{{url('/timetable_season_group')}}">Timetable Season Group</a></md-menu-item>
-                                                                                        <md-menu-item><a class="md-button" href="{{url('/sub_teach_assoc')}}">Subject Teacher Allocation</a></md-menu-item>
-                                                                                        <md-menu-item><a class="md-button" href="{{url('/view_timetable')}}">View Timetable</a></md-menu-item>
+                                                                                        <!--<md-menu-item><a class="md-button" href="{{url('/sub_teach_assoc')}}">Subject Teacher Allocation</a></md-menu-item>-->
                                                                                         <md-menu-item><a class="md-button" href="{{url('/timetable_master')}}">Timetable Master</a></md-menu-item>
+                                                                                        <md-menu-item><a class="md-button" href="{{url('/view_timetable')}}">View Timetable</a></md-menu-item>
+                                                                                        
+                                                                                    </md-menu-content>
+                                                                                </md-menu>
+                                                                            </md-menu-item>
+                                                                            <md-menu-item>
+                                                                                <md-menu>
+                                                                                    <a href="{{url('class_teacher_allocation')}}" ng-click="$mdOpenMenu()" class="md-button">Class Teacher Allocation</a>
+                                                                                    <md-menu-content hide>
+                                                                                        <md-menu-item><md-button>Document</md-button></md-menu-item>
+                                                                                    </md-menu-content>
+                                                                                </md-menu>
+                                                                            </md-menu-item>
+                                                                            <md-menu-item>
+                                                                                <md-menu>
+                                                                                    <a  ng-click="$mdOpenMenu()" class="md-button">Syllabus</a>
+                                                                                    <md-menu-content>
+                                                                                        <md-menu-item><a class="md-button" href="{{url('set_course')}}">Course Structure</a></md-menu-item>
+                                                                                        <md-menu-item><a class="md-button" href="{{url('course_topic_distribution')}}">Course Topic Distribution</a></md-menu-item>
+                                                                                    </md-menu-content>
+                                                                                </md-menu>
+                                                                            </md-menu-item>
+                                                                            <md-menu-item>
+                                                                                <md-menu>
+                                                                                    <a ng-click="$mdOpenMenu()" class="md-button">Examination</a>
+                                                                                    <md-menu-content>
+                                                                                        <md-menu-item><a class="md-button" href="{{url('set_term')}}">Set Term</a></md-menu-item>
+                                                                                        <md-menu-item><a class="md-button" href="{{url('term_exam_assoc')}}">Term Exam Structure</a></md-menu-item>
+                                                                                        <md-menu-item><a class="md-button" href="{{url('create_exam')}}">Create Exam</a></md-menu-item>
+                                                                                        <md-menu-item><a class="md-button" href="{{url('create_exam_notes')}}">Create Exam Instructions</a></md-menu-item>
+                                                                                        <md-menu-item><a class="md-button" href="{{url('exam_timetable')}}">Exam Timetable</a></md-menu-item>
+                                                                                        <md-menu-item><a class="md-button" href="{{url('exam_blueprint')}}">Create Exam Blueprint</a></md-menu-item>
+                                                                                        <md-menu-item><a class="md-button" href="{{url('view_exam_blueprint')}}">Exam Blueprint</a></md-menu-item>
+                                                                                        <md-menu-item><a class="md-button" href="{{url('create_questionpaper_blueprint')}}">Question Paper Blueprint</a></md-menu-item>
                                                                                     </md-menu-content>
                                                                                 </md-menu>
                                                                             </md-menu-item>
@@ -175,7 +211,7 @@ echo json_encode([
                                                                     </md-menu>
                                                                 </md-menu-bar>
                                                             </li>
-                                                            
+
                                                             <li> 
                                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Communication<b class="caret"></b></a>
                                                                 <ul class="dropdown-menu">
@@ -265,6 +301,7 @@ echo json_encode([
                         <script src="{{url('')}}/assets/js/select2.js"></script>
                         <script src="{{url('')}}/assets/js/select2_src.js"></script>
                         <script src="{{url('')}}/assets/js/sweetalert.min.js"></script>
+                        
 
                         <!-- CUSTOM:: CUSTOM.JS -->
                         <script type="text/javascript" src="{{url('')}}/assets/js/custom.min.js"></script>
@@ -274,7 +311,7 @@ echo json_encode([
                         <script type="text/javascript" src="{{url('')}}/assets/js/controllers_country.js"></script>
                         <script type="text/javascript" src="{{url('')}}/assets/js/controllers_state.js"></script>
                         <script type="text/javascript" src="{{url('')}}/assets/js/controllers_city.js"></script>
-                        <script type="text/javascript" src="{{url('')}}/assets/js/controllers_feeStructure.js"></script>
+                       
                         <script type="text/javascript" src="{{url('')}}/assets/js/controllers_student.js"></script>
                         <script type="text/javascript" src="{{url('')}}/assets/js/controllers_collection.js"></script>
                         <script type="text/javascript" src="{{url('')}}/assets/js/controllers_collectiontype.js"></script>
@@ -283,8 +320,12 @@ echo json_encode([
 
                         <script type="text/javascript" src="{{url('')}}/assets/js/angular-chart.min.js"></script>
                         <script type="text/javascript" src="{{url('')}}/assets/js/angular-timeline.js"></script>
-                        <script type="text/javascript" src="{{url('')}}/assets/js/mdPickers.js"></script>
+                        <script type="text/javascript" src="{{url('')}}/assets/js/bootstrap-timepicker.min.js"></script>
+                        <script type="text/javascript" src="{{url('')}}/assets/js/controller_examination.js"></script>
+                        <script type="text/javascript" src="{{url('')}}/assets/tinymce/js/tinymce/tinymce.min.js"></script>
 
+                       
+                        
                         <?php if (!\Cookie::get('timezone')) { ?>
                             <script type="text/javascript">
                                 $(document).ready(function () {

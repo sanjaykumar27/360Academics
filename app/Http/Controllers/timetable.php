@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\CollectionType;
 use App\Models\Collection;
+use App\Models\EventModel;
+use MaddHatter\LaravelFullcalendar\Event;
 
 class timetable extends Controller {
 
@@ -14,15 +16,17 @@ class timetable extends Controller {
     }
 
     public function createClassSubAssoc() {
-         $data['title'] = 'Subject Teacher Association';
+        $data['title'] = 'Subject Teacher Association';
         $data['module'] = 'Timetable';
-        return view('academics.createClassSubAssoc',$data);
+
+
+        return view('academics.createClassSubAssoc');
     }
 
     public function createSeasonGroup() {
-        $data['title'] = 'Season Group';
-        $data['module'] = 'Timetable';
-        return view('academics.createSeasonGroup',$data);
+
+
+        return view('academics.test');
     }
 
     public function collectionIndex() {
@@ -31,7 +35,7 @@ class timetable extends Controller {
 
     public function getSeason() {
 
-        $data = CollectionType::orderBy('type', 'asc')->where('type','=','Seasons')->get();
+        $data = CollectionType::orderBy('type', 'asc')->where('type', '=', 'Seasons')->get();
         if (count($data) > 0) {
             foreach ($data as $key => $val) {
                 $data[$key]->created_at = getLocalTime($val->created_at);
@@ -40,12 +44,12 @@ class timetable extends Controller {
         foreach ($data as $value) {
             $dataarray = $value->getcollection;
         }
-        
-        return json_encode($dataarray);
+
+        //return json_encode($dataarray);
     }
 
     public function collectionList(Request $request) {
-         $data['title'] = 'Subject Teacher Association';
+        $data['title'] = 'Subject Teacher Association';
         $data['module'] = 'Timetable';
         $id = $request->input('id');
         $data = Collection::orderBy('name', 'asc')->where('collection_type_id', $id)->whereIn('entity_status', ['Active', 'Inactive'])->get();
@@ -57,13 +61,22 @@ class timetable extends Controller {
         }
         return json_encode($data);
     }
-	
-	public function view_timetable() {
-		return view('academics.viewTimetable');
-	}
-	
-	public function timetableMaster() {
-		return view('academics.timetableMaster');
-	}
+
+    public function view_timetable() {
+        return view('academics.viewTimetable');
+    }
+
+    public function timetableMaster() {
+        return view('academics.timetableMaster');
+    }
+
+    public function classTeacherAllocation() {
+        return view('academics.classTeacherAllocation');
+    }
+
+    public function season() {
+
+        return view('academics.classTeacherAllocation');
+    }
 
 }

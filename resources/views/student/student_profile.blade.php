@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-
 <div class="d-container">
     <div class="container-fluid">
         <div class="row">
@@ -62,7 +61,7 @@
                         <md-tooltip md-direction="top">Father</md-tooltip></p>
                         <md-button aria-label="edit" class="md-fab md-mini md-raised md-mini">
                             <i class="material-icons">add</i>
-                            <md-tooltip  >
+                            <md-tooltip >
                                 Add Parent
                             </md-tooltip>
                         </md-button>

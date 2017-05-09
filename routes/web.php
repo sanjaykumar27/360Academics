@@ -65,6 +65,8 @@ Route::get('get_suburb', 'CreateStudentController@getSuburb');
 Route::get('sub_teach_assoc', 'timetable@createClassSubAssoc');
 Route::get('timetable_season_group', 'timetable@createSeasonGroup');
 
+Route::get('editor', 'timetable@season');
+
 
 Route::get('collection_type', 'CollectionTypeController@index');
 Route::get('get_collectiontype_list', 'CollectionTypeController@collectiontypeList');
@@ -92,3 +94,24 @@ Route::get('appointment','Communication@appointmentIndex');
 Route::get('view_timetable','timetable@view_timetable');
 
 Route::get('timetable_master','timetable@timetableMaster');
+Route::get('class_teacher_allocation','timetable@classTeacherAllocation');
+
+Route::get('set_term','Examination@setTerm');
+Route::get('term_exam_assoc','Examination@termexamAssoc');
+Route::get('create_exam','Examination@createExam');
+Route::get('create_exam_notes','Examination@createExamNotes');
+
+Route::get('exam_timetable','Examination@createTimetable');
+
+Route::get('set_course','Examination@createCourse');
+Route::get('course_topic_distribution','Examination@createCourseTopic');
+
+Route::get('exam_blueprint','Examination@examBluePrint');
+
+Route::get('view_exam_blueprint','Examination@viewexamBluePrint');
+Route::get('create_questionpaper_blueprint','Examination@createQuestionPaperBluePrint');
+
+// -------------------------------- TEST ------------------------------------ // 
+Route::get('feecollection', function(){
+    return View::make('test.feecollection');
+});
