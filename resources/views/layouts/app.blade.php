@@ -31,10 +31,10 @@
                     <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/css/main.css"/> 
                     <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/css/angular-timeline.css"/> 
                     <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/css/bootstrap-timepicker.min.css"/> 
-                    
+
                     <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/css/ui-cropper.css"/> 
                     <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/css/intlTelInput.css"/> 
-                    
+
 
                     <script>
                         window.Laravel = <?php
@@ -99,169 +99,172 @@ echo json_encode([
                             </md-sidenav>
                             <div class="d-header">
                                 <div class="d-header_info">
-                                    <div class="container">
-                                        <div class="row clearfix">
-                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right">
-                                                <div class="d-top_user" ng-controller="Notification as ctrl">
-                                                    <img src="{{url('')}}/assets/images/user.png" class="img-responsive" alt=""> 
-                                                        <div class="dropdown">
-                                                            <span class="dropdown-toggle" type="button" data-toggle="dropdown">HI, {{Auth::user()->fname}} [ System Admin ]
-                                                                <i class="caret"></i></span>
-                                                            <ul class="dropdown-menu"> 
-                                                                <li><a href="user_profile.html">Edit Profile</a></li> 
-                                                                <li><a href="change_password.html">Change Password</a></li> 
-                                                                <li><a href="{{ url('/logout')}}"
-                                                                       onclick="event.preventDefault();
-                                                                                       document.getElementById('logout-form').submit();">
-                                                                        Logout
-                                                                    </a><form id="logout-form" action="{{ url('/logout')}}" method="POST" style="display: none;">
-                                                                        {{ csrf_field()}}
-                                                                    </form></li> 
-                                                            </ul>
-                                                        </div>
-                                                        <span class="d-notification_icon" ng-click="openRightMenu()">
-                                                            <i class="fa fa-bell" aria-hidden="true"></i>
-                                                            <em>10</em>
-                                                        </span>
-
-                                                </div>
+                                    <div class="container-fluid">
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="col-xs-12 col-sm-2 col-md-4 col-lg-2 d-logo" >
+                                                <a href="{{url('/home')}}"><img style="height: 40px;" src="{{url('')}}/assets/images/logo.png" alt="" class="img-responsive"></a>
                                             </div>
-                                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                                <div class="d-main_menu">
-                                                    <nav>
-                                                        <ul>
-                                                            <li><a href="index.html">Home</a></li>
-                                                            <li><a href="#">About</a></li>
-                                                            <li><a href="#">Contact</a></li>
+                                            <span class="hidden-md hidden-lg clearfix">&nbsp</span>
+                                            <div class="d-main_menu" style="padding-top: 10px;">
+                                                <nav>
+                                                    <ul>
+                                                        <li><a href="index.html">Home</a></li>
+                                                        <li><a href="#">About</a></li>
+                                                        <li><a href="#">Contact</a></li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right" style="padding-top: 10px;">
+                                            <div class="d-top_user" ng-controller="Notification as ctrl">
+                                                <img src="{{url('')}}/assets/images/father.jpg" class="menu-icon img-responsive" alt=""> 
+                                                    <div class="dropdown">
+                                                        <span class="dropdown-toggle" type="button" data-toggle="dropdown">HI, {{Auth::user()->fname}} 
+                                                            &nbsp;<i class="fa fa-chevron-down"></i></span>
+                                                        <ul class="dropdown-menu"> 
+                                                            <li style="background-color: #d0d0d0"><a>[ System Admin ]</a></li>
+                                                            <li ><a href="user_profile.html">
+                                                                    <i class="fa fa-edit"></i> &nbsp; Edit Profile</a></li> 
+                                                            <li><a href="change_password.html">
+                                                                    <i class="fa fa-lock"></i> &nbsp; &nbsp;Change Password</a></li> 
+                                                            <li><a href="{{ url('/logout')}}"
+                                                                   onclick="event.preventDefault();
+                                                                                   document.getElementById('logout-form').submit();">
+                                                                    <i class="fa fa-sign-out"></i> &nbsp;       Logout
+                                                                </a><form id="logout-form" action="{{ url('/logout')}}" method="POST" style="display: none;">
+                                                                    {{ csrf_field()}}
+                                                                </form></li> 
                                                         </ul>
-                                                    </nav>
-                                                </div>
+                                                    </div>
+                                                    <span class="d-notification_icon" ng-click="openRightMenu()">
+                                                        <i class="fa fa-bell" aria-hidden="true"></i>
+                                                        <em>10</em>
+                                                    </span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-header_strip">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-xs-12 col-sm-2 col-md-4 col-lg-4 d-logo">
-                                                <a href="{{url('/home')}}"><img src="{{url('')}}/assets/images/logo.png" alt="" class="img-responsive"></a>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8 d-nav"> 
-                                                <nav class="navbar navbar-default" role="navigation">  
-                                                    <div class="navbar-header">
-                                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                                                            <span class="sr-only">Toggle navigation</span>
-                                                            <span class="icon-bar"></span>
-                                                            <span class="icon-bar"></span>
-                                                            <span class="icon-bar"></span>
-                                                        </button> 
-                                                    </div> 
-                                                    <div class="collapse navbar-collapse navbar-ex1-collapse"> 
-                                                        <ul class="nav navbar-nav navbar-right"> 
-                                                            <li>
-                                                                <md-menu-bar>
-                                                                    <md-menu>
-                                                                        <a href="#" class="md-button dropdown-toggle" style="padding-top: 2px; color: #fff" ng-click="$mdOpenMenu()">Academics <b class="caret"></b></a>
-                                                                        <md-menu-content>           
-                                                                            <md-menu-item>
-                                                                                <md-menu>
-                                                                                    <a class="md-button" ng-click="$mdOpenMenu()">Time Table</a>
-                                                                                    <md-menu-content>
-                                                                                        <md-menu-item><a class="md-button" href="{{url('/timetable_season_group')}}">Timetable Season Group</a></md-menu-item>
-                                                                                        <!--<md-menu-item><a class="md-button" href="{{url('/sub_teach_assoc')}}">Subject Teacher Allocation</a></md-menu-item>-->
-                                                                                        <md-menu-item><a class="md-button" href="{{url('/timetable_master')}}">Timetable Master</a></md-menu-item>
-                                                                                        <md-menu-item><a class="md-button" href="{{url('/view_timetable')}}">View Timetable</a></md-menu-item>
-                                                                                        
-                                                                                    </md-menu-content>
-                                                                                </md-menu>
-                                                                            </md-menu-item>
-                                                                            <md-menu-item>
-                                                                                <md-menu>
-                                                                                    <a href="{{url('class_teacher_allocation')}}" ng-click="$mdOpenMenu()" class="md-button">Class Teacher Allocation</a>
-                                                                                    <md-menu-content hide>
-                                                                                        <md-menu-item><md-button>Document</md-button></md-menu-item>
-                                                                                    </md-menu-content>
-                                                                                </md-menu>
-                                                                            </md-menu-item>
-                                                                            <md-menu-item>
-                                                                                <md-menu>
-                                                                                    <a  ng-click="$mdOpenMenu()" class="md-button">Syllabus</a>
-                                                                                    <md-menu-content>
-                                                                                        <md-menu-item><a class="md-button" href="{{url('set_course')}}">Course Structure</a></md-menu-item>
-                                                                                        <md-menu-item><a class="md-button" href="{{url('course_topic_distribution')}}">Course Topic Distribution</a></md-menu-item>
-                                                                                    </md-menu-content>
-                                                                                </md-menu>
-                                                                            </md-menu-item>
-                                                                            <md-menu-item>
-                                                                                <md-menu>
-                                                                                    <a ng-click="$mdOpenMenu()" class="md-button">Examination</a>
-                                                                                    <md-menu-content>
-                                                                                        <md-menu-item><a class="md-button" href="{{url('set_term')}}">Set Term</a></md-menu-item>
-                                                                                        <md-menu-item><a class="md-button" href="{{url('term_exam_assoc')}}">Term Exam Structure</a></md-menu-item>
-                                                                                        <md-menu-item><a class="md-button" href="{{url('create_exam')}}">Create Exam</a></md-menu-item>
-                                                                                        <md-menu-item><a class="md-button" href="{{url('create_exam_notes')}}">Create Exam Instructions</a></md-menu-item>
-                                                                                        <md-menu-item><a class="md-button" href="{{url('exam_timetable')}}">Exam Timetable</a></md-menu-item>
-                                                                                        <md-menu-item><a class="md-button" href="{{url('exam_blueprint')}}">Create Exam Blueprint</a></md-menu-item>
-                                                                                        <md-menu-item><a class="md-button" href="{{url('view_exam_blueprint')}}">Exam Blueprint</a></md-menu-item>
-                                                                                        <md-menu-item><a class="md-button" href="{{url('create_questionpaper_blueprint')}}">Question Paper Blueprint</a></md-menu-item>
-                                                                                    </md-menu-content>
-                                                                                </md-menu>
-                                                                            </md-menu-item>
-                                                                        </md-menu-content>
-                                                                    </md-menu>
-                                                                </md-menu-bar>
-                                                            </li>
+                                <div class="d-header_strip" >
+                                    <div class="container-fluid " >
+                                        <div class="col-xs-12 col-sm-10 col-md-12 col-lg-12 d-nav"> 
+                                            <nav class="navbar navbar-default " role="navigation" >  
+                                                <div class="navbar-header">
+                                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                                        <span class="sr-only">Toggle navigation</span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                    </button> 
+                                                </div> 
+                                                <div class="collapse navbar-collapse navbar-ex1-collapse col-md-offset-3"> 
+                                                    <ul class="nav navbar-nav navbar-right "> 
+                                                        <li>
+                                                            <md-menu-bar>
+                                                                <md-menu>
+                                                                    <a href="#" class="md-button dropdown-toggle" style="padding-top: 2px; color: #fff" ng-click="$mdOpenMenu()"><i class="fa fa-file-o"></i> &nbsp; Academics <b class="caret"></b></a>
+                                                                    <md-menu-content>           
+                                                                        <md-menu-item>
+                                                                            <md-menu>
+                                                                                <a class="md-button" ng-click="$mdOpenMenu()">Time Table</a>
+                                                                                <md-menu-content>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('/timetable_season_group')}}">Timetable Date Range</a></md-menu-item>
+                                                                                    <!--<md-menu-item><a class="md-button" href="{{url('/sub_teach_assoc')}}">Subject Teacher Allocation</a></md-menu-item>-->
+                                                                                    <md-menu-item><a class="md-button" href="{{url('/timetable_master')}}">Timetable Master</a></md-menu-item>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('/view_timetable')}}">View Timetable</a></md-menu-item>
+                                                                                </md-menu-content>
+                                                                            </md-menu>
+                                                                        </md-menu-item>
+                                                                        <md-menu-item>
+                                                                            <md-menu>
+                                                                                <a href="{{url('class_teacher_allocation')}}" ng-click="$mdOpenMenu()" class="md-button">Subject Teacher Allocation</a>
+                                                                                <md-menu-content hide>
+                                                                                    <md-menu-item><md-button>Document</md-button></md-menu-item>
+                                                                                </md-menu-content>
+                                                                            </md-menu>
+                                                                        </md-menu-item>
+                                                                        <md-menu-item>
+                                                                            <md-menu>
+                                                                                <a  ng-click="$mdOpenMenu()" class="md-button">Syllabus</a>
+                                                                                <md-menu-content>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('set_course')}}">Course Structure</a></md-menu-item>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('course_topic_distribution')}}">Course Topic Distribution</a></md-menu-item>
+                                                                                </md-menu-content>
+                                                                            </md-menu>
+                                                                        </md-menu-item>
 
-                                                            <li> 
-                                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Communication<b class="caret"></b></a>
-                                                                <ul class="dropdown-menu">
-                                                                    <li><a href="phone_log">Phone Log</a></li>
-                                                                    <li><a href="other_log">Other Log</a></li>
-                                                                    <li><a href="appointment">Appointments</a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <li> 
-                                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Master <b class="caret"></b></a>
-                                                                <ul class="dropdown-menu">
-                                                                    <li><a href="{{url('/collection_type')}}">Collection Type</a></li>
-                                                                    <!--<li><a href="{{url('/module')}}">Module</a></li>
-                                                                    <li><a href="{{url('/role')}}">Role</a></li>-->
-                                                                </ul>
-                                                            </li>
-                                                            <li> 
-                                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Student <b class="caret"></b></a>
-                                                                <ul class="dropdown-menu">
-                                                                    <li><a href="{{url('/create_student')}}">Create Student</a></li>
-                                                                    <li><a href="{{url('/student_profile')}}">Student Profile</a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <!--    
-                                                                <li> 
-                                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Fees <b class="caret"></b></a>
-                                                                 <ul class="dropdown-menu">
-                                                                   <li><a href="{{url('/fee_structure')}}">Fee Structure</a></li>
-                                                                   <li><a href="{{url('/fee_rule')}}">Fee Rules</a></li>
-                                                                 </ul>
-                                                                </li>
-                                                                                    <li> 
-                                                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Geo Location<b class="caret"></b></a>
-                                                                 <ul class="dropdown-menu">
-                                                                   <li><a href="{{url('/country')}}">Country</a></li>
-                                                                   <li><a href="{{url('/state')}}">State</a></li>
-                                                                   <li><a href="{{url('/city')}}">city</a></li>
-                                                                 </ul>
-                                                                </li> -->
-                                                        </ul>
-                                                    </div>
-                                                </nav>
-                                            </div>
+                                                                        <md-menu-item>
+                                                                            <md-menu>
+                                                                                <a ng-click="$mdOpenMenu()" class="md-button">Examination</a>
+                                                                                <md-menu-content>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('set_term')}}">Set Term</a></md-menu-item>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('term_exam_assoc')}}">Term Exam Structure</a></md-menu-item>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('create_exam')}}">Create Exam</a></md-menu-item>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('create_exam_notes')}}">Create Exam Instructions</a></md-menu-item>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('exam_timetable')}}">Exam Timetable</a></md-menu-item>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('exam_blueprint')}}">Create Exam Blueprint</a></md-menu-item>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('view_exam_blueprint')}}">Exam Blueprint</a></md-menu-item>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('create_questionpaper_blueprint')}}">Question Paper Blueprint</a></md-menu-item>
+                                                                                </md-menu-content>
+                                                                            </md-menu>
+                                                                        </md-menu-item>
+
+                                                                        <md-menu-item>
+                                                                            <md-menu>
+                                                                                <a  ng-click="$mdOpenMenu()" class="md-button">Attendance</a>
+                                                                                <md-menu-content>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('mark_attendance')}}">Mark Attendance</a></md-menu-item>
+                                                                                </md-menu-content>
+                                                                            </md-menu>
+                                                                        </md-menu-item>
+                                                                        <md-menu-item>
+                                                                            <md-menu>
+                                                                                <a  ng-click="$mdOpenMenu()" class="md-button">Subjects</a>
+                                                                                <md-menu-content>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('co_scholastic_master')}}">Co-Scholastic Master</a></md-menu-item>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('co_scholastic_assoc')}}">Class - Co-Scholastic Association</a></md-menu-item>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('marks_distribution')}}">Marks Distribution</a></md-menu-item>
+                                                                                </md-menu-content>
+                                                                            </md-menu>
+                                                                        </md-menu-item>
+                                                                    </md-menu-content>
+                                                                </md-menu>
+                                                            </md-menu-bar>
+                                                        </li>
+
+                                                        <li> 
+                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-phone"></i>  &nbsp; Communication<b class="caret"></b></a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="phone_log">Phone Log</a></li>
+                                                                <li><a href="other_log">Other Log</a></li>
+                                                                <li><a href="appointment">Appointments</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <!-- <li> 
+                                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lock"></i>  &nbsp; Master <b class="caret"></b></a>
+                                                             <ul class="dropdown-menu">
+                                                                 <li><a href="{{url('/collection_type')}}">Collection Type</a></li>
+                                                             </ul>
+                                                         </li>-->
+                                                        <li>
+                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>  &nbsp;Student <b class="caret"></b></a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="{{url('/create_student')}}">Create Student</a></li>
+                                                                <li><a href="{{url('/student_profile')}}">Student Profile</a></li>
+                                                                <li><a href="{{url('/daily_report')}}">Daily Report</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </nav>
                                         </div>
+
                                     </div>
 
                                 </div>
 
                             </div>
                         </header>
+
                         <input type="text" id="path" name="path" value="{{url('')}}" style="display: none;"/>
                         <div id="loader"></div>
                         @yield('content')
@@ -301,7 +304,7 @@ echo json_encode([
                         <script src="{{url('')}}/assets/js/select2.js"></script>
                         <script src="{{url('')}}/assets/js/select2_src.js"></script>
                         <script src="{{url('')}}/assets/js/sweetalert.min.js"></script>
-                        
+
 
                         <!-- CUSTOM:: CUSTOM.JS -->
                         <script type="text/javascript" src="{{url('')}}/assets/js/custom.min.js"></script>
@@ -311,7 +314,7 @@ echo json_encode([
                         <script type="text/javascript" src="{{url('')}}/assets/js/controllers_country.js"></script>
                         <script type="text/javascript" src="{{url('')}}/assets/js/controllers_state.js"></script>
                         <script type="text/javascript" src="{{url('')}}/assets/js/controllers_city.js"></script>
-                       
+
                         <script type="text/javascript" src="{{url('')}}/assets/js/controllers_student.js"></script>
                         <script type="text/javascript" src="{{url('')}}/assets/js/controllers_collection.js"></script>
                         <script type="text/javascript" src="{{url('')}}/assets/js/controllers_collectiontype.js"></script>
@@ -324,8 +327,8 @@ echo json_encode([
                         <script type="text/javascript" src="{{url('')}}/assets/js/controller_examination.js"></script>
                         <script type="text/javascript" src="{{url('')}}/assets/tinymce/js/tinymce/tinymce.min.js"></script>
 
-                       
-                        
+
+
                         <?php if (!\Cookie::get('timezone')) { ?>
                             <script type="text/javascript">
                                 $(document).ready(function () {

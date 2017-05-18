@@ -65,20 +65,9 @@
                                 </select>
                             </md-input-container>
                         </div>
-                        <div class="col-lg-1 md-caption">
-                            <span class="clearfix">&nbsp;<br><br></span>
-                            <md-input-container >
-                                <label>Marks</label>
-                                <input type="text" disabled ng-model="ctrl.subject_dist" >
-                            </md-input-container>
-                        </div>
 
-                        <div class="col-lg-1">
-                            <md-input-container class="md-block">
-                                <span class="clearfix">&nbsp;<br><br></span>
-                                <md-button data-toggle="modal" data-target="#myModal"  class="md-raised md-primary">Set Marks</md-button>
-                            </md-input-container>
-                        </div>
+
+
                         <script type="text/javascript">
                             $(document).ready(function () {
                             $('#timepicker1').timepicker();
@@ -86,13 +75,13 @@
                             });
                         </script>
                         <div class="col-lg-3">
-                            <span class="clearfix">&nbsp;<br><br><br></span>
+                            <span class="clearfix">&nbsp;<br><br></span>
                             <md-datepicker name="date-from" ng-model="ctrl.examdate"  md-placeholder="Exam Date" md-min-date="minDate" 
                                            md-max-date="maxDate" required>
                             </md-datepicker>
                         </div>
-                        <div class="col-lg-2">
-                            <span class="clearfix">&nbsp;<br><br></span>
+                        <div class="col-lg-3">
+                            <span class="clearfix">&nbsp;<br></span>
                             <label>Start Time</label>
                             <div class="input-group bootstrap-timepicker timepicker">
 
@@ -100,8 +89,8 @@
                                 <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
                             </div>
                         </div>
-                        <div class="col-lg-2">
-                            <span class="clearfix">&nbsp;<br><br></span>
+                        <div class="col-lg-3">
+                            <span class="clearfix">&nbsp;<br></span>
                             <label>End Time</label>
                             <div class="input-group bootstrap-timepicker timepicker">
                                 <input id="timepicker2" ng-model="singledata.endTime" type="text" class="form-control input-small">
@@ -109,7 +98,7 @@
                             </div>
                         </div>
                         <div class="col-lg-1">
-                            <span class="clearfix">&nbsp;<br><br><br></span>
+                            <span class="clearfix">&nbsp;<br><br></span>
                             <md-button aria-label="edit" class="md-fab md-mini md-raised md-mini" ng-click="addplus()" ng-show="$index == 0" >
                                 <i class="material-icons">add</i>
                                 <md-tooltip md-visible="demo.add_row" md-direction="" >
@@ -126,10 +115,10 @@
                             </md-button>
                         </div>
                     </div>
+                    <span class="clearfix">&nbsp;<br><br></span>
                     <div class="row">
-                        <div class="col-lg-4"></div>
-                        <div class="col-lg-6"> 
-                            <md-button class="md-raised md-default">Cancel</md-button>
+                        <div class="col-lg-12 col-lg-offset-5"> 
+                            <md-button class="md-raised md-default">Cancel</md-button>&nbsp;
                             <input type="submit" class="md-button md-raised md-primary" name="submit" value="Submit">
                         </div>
                     </div>
@@ -156,7 +145,7 @@
                                     </md-checkbox>
                                 </div>
                                 <div class="col-lg-6">
-                                        <input class="form-control" type="text" placeholder="Marks">
+                                    <input class="form-control" type="text" placeholder="Marks">
                                 </div>
                                 <span class="clearfix">&nbsp;</span>
                             </div>  

@@ -106,8 +106,7 @@
                                         <input type="text" readonly class="form-control" ng-model="ctrl.total_marks2" value="15">
                                     </td>
                                     <td>
-
-                                        <label></label>
+										<label></label>
                                         <input type="text" class="form-control" readonly ng-model="ctrl.percentage2">
                                     </td>
                                 </tr>
@@ -285,7 +284,7 @@
                                     </td>
 
                                     <td>
-                                    <md-button class="md-raised  md-primary"  ng-click="addRow()"  >Add Period</md-button>
+                                    <md-button class="md-raised  md-primary"  ng-click="addRow()"  >Add Question</md-button>
                                     </td>
                                     </tr>
 

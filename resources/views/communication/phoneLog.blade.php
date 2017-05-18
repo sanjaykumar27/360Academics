@@ -8,12 +8,7 @@
 </style>
 <div class="container-d" ng-controller="phoneLog">
     <div class="container">
-         <div class="row col-md-offset-2">
-            <a href="" class="col-lg-3 md-button md-raised md-primary">Show Phone Log</a>
-            <a href="" class="col-lg-3 md-button md-raised md-primary">Show Other Log</a>
-            <a href="" class="col-lg-3 md-button md-raised md-primary">Show Appointments</a>
-        </div>
-        <br>
+        
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-primary">

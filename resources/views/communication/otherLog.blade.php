@@ -9,12 +9,6 @@
 <br><br>
 <div class="d-container">
     <div class="container">
-        <div class="row col-md-offset-2">
-            <a href="" class="col-lg-3 md-button md-raised md-primary">Show Phone Log</a>
-            <a href="" class="col-lg-3 md-button md-raised md-primary">Show Other Log</a>
-            <a href="" class="col-lg-3 md-button md-raised md-primary">Show Appointments</a>
-        </div>
-        <br>
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-primary">
@@ -113,10 +107,11 @@
 
 
         <div class="row">
-            <div class="col-lg-3">
-                <div class="panel panel-primary md-caption"  style="height: 500px;overflow-y: scroll">
+            <div class="col-lg-3 col-xs-12">
+                <div class="panel panel-primary md-caption"  style="height: 500px; overflow-y: scroll">
                     <div class="panel-heading">All Threads</div>
                     <div class="panel-body">
+                        <div class="table-responsive">
                         <table class="table table-striped table-hover">
                             <tr class="info">
                                 <td>Channels [5]
@@ -165,11 +160,12 @@
                             </tr>
 
                         </table>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-9">
+            <div class="col-lg-9 col-xs-12">
                 <div class="panel panel-primary " ng-controller="timeline" >
                     <div class="panel-heading">All Threads <label class="label-default">
                             <i class="fa fa-hashtag md-title"></i>allstudents</label>

@@ -59,58 +59,69 @@
                   <md-input-container class="md-block" ng-class="(submitted && !frmlogin.email.$valid) ? 'd-validation-error' : ''" flex-gt-sm >
                     <i class="material-icons">person</i>
                     <label>Email</label>
-                    <input ng-model="singledata.email" name="email"  required type="email" ng-model-options="{debounce : 700}" value="{{ old('email') }}">
+                    <input ng-model="singledata.email" name="email"  required type="email" ng-model-options="{debounce : 700}" value="{{ old('email') }}" ng-keyup="$event.keyCode == 13 && checklogin(frmlogin.$valid)">
 					<div ng-show="submitted && frmlogin.email.$error " class="md-input-messages-animation md-auto-hide ng-active">
-					  <div ng-show="frmlogin.email.$error.required">{{ config('constant.error.Required') }}</div>
+					  <div ng-show="frmlogin.email.$error.required">{{ config('constant.error.EmailNotEmpty') }}</div>
 					  <div ng-show="frmlogin.email.$error.email">{{ config('constant.error.ValidEmail') }}</div>
 					</div>
-					@if ($errors->has('email'))
-						<div ng-show="loginErrorMessage"  class="md-input-messages-animation md-auto-hide ng-active">
-							 <div>{{ config('constant.error.LoginEmail') }}</div>
-						</div>
-					@endif
                   </md-input-container>
                   <md-input-container class="md-block" ng-class="(submitted && !frmlogin.password.$valid) ? 'd-validation-error' : ''" flex-gt-sm>
                     <i class="material-icons">lock_outline</i>
                     <label>Password</label>
-                    <input name="password" ng-model="singledata.password" required="" ng-minlength="6" ng-maxlength="30"   type="password" ng-model-options="{debounce : 700}">
-                    <div ng-show="submitted &&  frmlogin.password.$error " class="md-input-messages-animation md-auto-hide ng-active">
-					  <div ng-show="frmlogin.password.$error.required">{{ config('constant.error.Required') }}</div>
-					  <div ng-show="frmlogin.password.$error.minlength || frmlogin.password.$error.maxlength">{{ config('constant.error.LoginPassMinLength') }}</div>
+                    <input name="password" ng-model="singledata.password" required="" type="password"   ng-keyup="$event.keyCode == 13 && checklogin(frmlogin.$valid)">
+                    <div ng-show="(submitted &&  frmlogin.password.$error) || (<?php echo ($errors->has('email')) ? 1 : 0;?>)" class="md-input-messages-animation md-auto-hide ng-active">
+					  <div ng-show="submitted &&  frmlogin.password.$error.required">{{ config('constant.error.PasswordNotEmpty') }}</div>
+					  @if ($errors->has('email'))
+						<div ng-show="loginErrorMessage"  class="md-input-messages-animation md-auto-hide ng-active" style="color:#FF0000; font-size:12px" >
+							 {{ config('constant.error.LoginEmail') }}
+						</div>
+					@endif
 					</div>
                   </md-input-container>
                   <md-button class="md-raised md-primary" ng-click="checklogin(frmlogin.$valid)">Submit</md-button>
                 <div class="d-form_links"> 
                    
-				    <input type="checkbox" name="remember" class="md-checkbox"> Remember Me
-                   <a href="#" class="pull-right">Forgot Password ?</a>
+				    <input type="checkbox" name="remember" class="md-checkbox"> Remember me
+                   <a data-toggle="modal" href='#modal-id' class="pull-right">Forgot password ?</a>
                 </div>
                 </form>
               </div>
           </div>
      </div>
    </div>  
+   <div class="modal fade" id="modal-id">
+	<div class="modal-dialog">
+	 <div class="modal-content"> 
+	   <div class="modal-body clearfix">
+		  <div class="panel panel-default">
+			<div class="panel-heading clearfix">
+			  <h3 class="panel-title d-no_padding">Forgot password</h3> 
+			</div> 
+		  </div>
+		  <div class="clearfix well">
+		  <form  method="post" name="forgetpass" id="forgetpass"  novalidate="novalidate" ng-submit="forgot_pass(forgetpass.$valid)" >
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+				 <md-input-container class="md-block" ng-class="(submitForget && !forgetpass.email.$valid) ? 'd-validation-error' : ''" flex-gt-sm >
+					<label>Email</label>
+                    <input ng-model="forget.email" name="email"  required type="email" ng-model-options="{debounce : 700}" ng-keyup="$event.keyCode == 13 && forgot_pass(forgetpass.$valid)">
+					<div ng-show="submitForget && forgetpass.email.$error " class="md-input-messages-animation md-auto-hide ng-active">
+					  <div ng-show="forgetpass.email.$error.required">{{ config('constant.error.Required') }}</div>
+					   <div ng-show="forgetpass.email.$error.email">{{ config('constant.error.ValidEmail') }}</div>
+					</div>
+				</md-input-container>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">  
+				<md-button class="md-raised md-button" data-dismiss="modal">Cancel</md-button>&nbsp;&nbsp;&nbsp;
+				 <md-button class="md-raised md-primary" type="submit">Save</md-button>
+			</div>
+			</div>
+				
+			</form>
+		  </div>
+	   </div>  
+	 </div>
+	</div>   
  </div>
- <footer>
-   <div class="d-footer">
-     <div class="container">
-       <div class="row clearfix">
-         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 pull-right">
-            <ul class="d-footer_social">
-              <li><a href="#" class="fa fa-facebook"></a></li>
-              <li><a href="#" class="fa fa-google-plus"></a></li>
-              <li><a href="#" class="fa fa-twitter"></a></li>
-            </ul>
-          </div> 
-         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-           <p>
-             Copyright &copy; 2017 eBizneeds Business Solutions | All Rights Reserved <br>
-             Total School Empowerment Solutions. | <a href="#">360° view</a> 
-           </p>
-         </div>
-       </div>
-     </div> 
-   </div>
  </footer>
 
  <!-- JQUERY:: BOOTSTRAP.JS --> 

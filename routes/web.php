@@ -18,36 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('home', 'HomeController@index');
-Route::get('module', 'ModuleController@index');
-Route::get('get_module_list', 'ModuleController@moduleList');
-Route::post('module_save', 'ModuleController@moduleSave');
 
-Route::get('role', 'RoleController@index');
-Route::get('get_role_list', 'RoleController@roleList');
-Route::post('role_save', 'RoleController@roleSave');
 
-Route::get('country', 'CountryController@index');
-Route::get('get_country_list', 'CountryController@countryList');
-Route::post('country_save', 'CountryController@countrySave');
-
-Route::get('state', 'StateController@index');
-Route::get('get_state_country_list', 'StateController@stateCountryList');
-Route::get('get_state_list/{id}', 'StateController@stateList');
-Route::get('get_city_list/{id}', 'CityController@cityList');
-Route::post('state_save', 'StateController@stateSave');
-
-Route::get('city', 'CityController@index');
-Route::get('get_city_state_country_list', 'CityController@CityStateCountryList');
-Route::post('city_save', 'CityController@citySave');
-
-Route::get('fee_structure', 'FeeStructureController@classMaster');
-Route::get('add_fee_structure', 'FeeStructureController@add');
-
-Route::post('fee_structure_save', 'FeeStructureController@save');
-Route::get('fee_rule', 'FeeRuleController@show');
-
-Route::get('add_fee_rule', 'FeeRuleController@index');
-Route::post('add_student', 'CreateStudentController@savestudent');
 
 Route::get('updatetimezone/{time}', function ($time) {
     \Cookie::queue('timezone', $time, 43200);
@@ -63,7 +35,9 @@ Route::get('get_studenttype', 'CreateStudentController@getStudentType');
 Route::get('get_suburb', 'CreateStudentController@getSuburb');
 
 Route::get('sub_teach_assoc', 'timetable@createClassSubAssoc');
-Route::get('timetable_season_group', 'timetable@createSeasonGroup');
+Route::get('timetable_season_group',function(){
+    return View::make('academics.createSeasonGroup');
+});
 
 Route::get('editor', 'timetable@season');
 
@@ -114,4 +88,31 @@ Route::get('create_questionpaper_blueprint','Examination@createQuestionPaperBlue
 // -------------------------------- TEST ------------------------------------ // 
 Route::get('feecollection', function(){
     return View::make('test.feecollection');
+});
+
+Route::get('daily_report', function(){
+    return View::make('reports.dailyReport');
+});
+
+Route::get('mark_attendance', function(){
+    return View::make('academics.markAttendance');
+});
+
+Route::get('co_scholastic_master', function(){
+    return View::make('academics.coScholasticMaster');
+});
+
+Route::get('co_scholastic_assoc', function(){
+    return View::make('academics.coScholasticAssoc');
+});
+Route::get('create_co_scholastic_assoc', function(){
+    return View::make('academics.createcoScholasticAssoc');
+});
+
+Route::get('marks_distribution', function(){
+    return View::make('academics.marksDistribution');
+});
+
+Route::get('create_marks_distribution', function(){
+    return View::make('academics.createMarksDistribution');
 });
