@@ -81,7 +81,6 @@ echo json_encode([
                                             <i class="material-icons">close</i>
                                             <span>Close Notification</span>
                                         </div>
-
                                     </div>
                                     <ul class="d-notification_list">
                                         <li class="d-visible"><span>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span></li>
@@ -220,9 +219,19 @@ echo json_encode([
                                                                             <md-menu>
                                                                                 <a  ng-click="$mdOpenMenu()" class="md-button">Subjects</a>
                                                                                 <md-menu-content>
-                                                                                    <md-menu-item><a class="md-button" href="{{url('co_scholastic_master')}}">Co-Scholastic Master</a></md-menu-item>
-                                                                                    <md-menu-item><a class="md-button" href="{{url('co_scholastic_assoc')}}">Class - Co-Scholastic Association</a></md-menu-item>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('co_scholastic_master')}}">Subject Criteria</a></md-menu-item>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('co_scholastic_assoc')}}">Class - Subject Association</a></md-menu-item>
                                                                                     <md-menu-item><a class="md-button" href="{{url('marks_distribution')}}">Marks Distribution</a></md-menu-item>
+                                                                                </md-menu-content>
+                                                                            </md-menu>
+                                                                        </md-menu-item>
+
+                                                                        <md-menu-item>
+                                                                            <md-menu>
+                                                                                <a  ng-click="$mdOpenMenu()" class="md-button">Marksheets</a>
+                                                                                <md-menu-content>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('input_marks')}}">Input Marks</a></md-menu-item>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('green_sheet')}}">Green Sheet</a></md-menu-item>
                                                                                 </md-menu-content>
                                                                             </md-menu>
                                                                         </md-menu-item>
@@ -237,6 +246,12 @@ echo json_encode([
                                                                 <li><a href="phone_log">Phone Log</a></li>
                                                                 <li><a href="other_log">Other Log</a></li>
                                                                 <li><a href="appointment">Appointments</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li> 
+                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-wrench"></i>  &nbsp; Admin &nbsp;<b class="caret"></b></a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="verifiy_marks">Verify Marks</a></li>
                                                             </ul>
                                                         </li>
                                                         <!-- <li> 

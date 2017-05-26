@@ -14,11 +14,11 @@
                 </button> 
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Search Co-Scholastic...</label>
-                    <input  type="search" ng-model="search" ng-model-options="{ debounce: 700 }">
+                    <input  type="search" ng-model="search" ng-model-options="{debounce: 700}">
                 </md-input-container>
             </div>
             <div class="d-listing_toolbar_title pull-left"> 
-                <span>Co Scholastic Association</span> 
+                <span>Subject Class Association</span> 
             </div>
             <div class="d-toolbar_icon pull-right">
                 <button ng-click="showme = true"  class="md-fab md-mini md-button md-ink-ripple" aria-label="Search  Co Scholastic Association">
@@ -27,7 +27,6 @@
                         Search Co Scholastic Association
                     </md-tooltip>
                 </button>&nbsp; 
-
                 <a aria-label="edit" on-click="" href="{{url('create_co_scholastic_assoc')}}" class="md-button md-fab md-mini md-raised md-mini pull-right">
                     <i class="material-icons">add</i>
                     <md-tooltip md-visible="demo.add_collectiontype" md-direction="demo.add_collectiontype">
@@ -37,7 +36,7 @@
             </div>
         </md-toolbar>
         <div class="clearfix row">
-            <div class="col-lg-3 d-search_side">
+            <div class="col-lg-3 col-md-3 d-search_side">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <form method="post" name="frmsearch" id="frmsearch" novalidate="novalidate" >
@@ -61,6 +60,26 @@
                                     </select>
                                 </md-input-container>
                             </div>
+                            <div class="col-lg-12">
+                                <md-input-container class="md-block" >
+                                    <label>Select Class</label>&nbsp;
+                                    <select ui-select2  ng-model="ctrl.exam">
+                                        <option value="fa1">I</option>
+                                        <option value="fa2">II</option>
+                                        <option value="sa1">III</option>
+                                        <option value="sa1">IV</option>
+                                    </select>
+                                </md-input-container>
+                            </div>
+                            <div class="col-lg-12">
+                                <md-input-container class="md-block" >
+                                    <label>Select Subject Criteria</label>&nbsp;
+                                    <select ui-select2  ng-model="ctrl.exam">
+                                        <option value="fa1">Scholastic</option>
+                                        <option value="fa2">Co Scholastic</option>
+                                    </select>
+                                </md-input-container>
+                            </div>
 
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
                                 <md-button ng-click="filter()" class="md-raised md-primary">Search</md-button>
@@ -70,22 +89,18 @@
                 </div>
             </div>
 
-            <div class="col-lg-9">
-
-
+            <div class="col-lg-9 col-md-9">
+                <p class='label label-info'>If Co Scholastic is selected</p>
                 <div class="table-responsive">
                     <table class="table table-striped table-hover table-bordered">
                         <tr class="info">
                             <td width="10%">S.no</td>
-                            <td>Class</td>
                             <td>Heads</td>
                             <td>Remarks</td>
                             <td width="20%">Action</td>
                         </tr>
-
                         <tr>
                             <td>1</td>
-                            <td>II</td>
                             <td ng-click="showList1 = !showList1">Thinking Skills
                                 <span style="float:  right"><i class="fa fa-chevron-down"></i></span></td>
                             <td>Test</td>
@@ -105,7 +120,6 @@
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>IV</td>
                             <td ng-click="showList2 = !showList2">Social Skills
                                 <span style="float:  right"><i class="fa fa-chevron-down"></i></span></td>
                             <td>Test</td>
@@ -125,10 +139,50 @@
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>V</td>
                             <td>Emotion Skills</td>
                             <td>Test</td>
                             <td></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p class='label label-danger'>If Scholastic is selected</p>
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered">
+                        <tr class="info">
+                            <td width="10%">S.no</td>
+                            <td>Subject</td>
+                            <td>Code</td>
+                            <td width="20%">Action</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>English</td>
+                            <td>E101</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Hindi</td>
+                            <td>H115</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td ng-click="shwSubject = !shwSubject">English II
+                                <span style="float:  right"><i class="fa fa-chevron-down"></i></span></td>
+                            <td>Test</td>
+                            <td></td>
+                        </tr>
+                        <tr ng-show="shwSubject">
+                            <td align="right" >i.</td>
+                            <td  colspan="4">Reading Ability</td>
+                        </tr>
+                        <tr ng-show="shwSubject">
+                            <td align="right"  >ii.</td>
+                            <td  colspan="4">Writing Ability</td>
                         </tr>
                     </table>
                 </div>
@@ -137,6 +191,8 @@
         </div>
     </div>
 </div>
+
+<br><br>
 
 <br><br>
 @endsection

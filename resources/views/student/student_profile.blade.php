@@ -321,13 +321,132 @@
                         </md-tab>
 
                         <!------------------- Academics tab----------------------- Academics tab ------------------------Academics tab-------------------->
-                        <md-tab label="Academics">
+                        <md-tab label="Academics" id="academics">
                             <md-content class="md-padding">
                                 <div class="row">
-                                    <div class="panel panel-primary">
-                                        <div class="panel-heading">Attendance</div>
-                                        <div class="panel-body">
-                                            <div class="col-lg-6" ng-controller="attendanceCtrl">
+                                    <div class="panel panel-primary" >
+                                        <div class="panel-heading" >Academic Performance: Scholastic Areas
+                                            <i style="float: right" class='fa fa-angle-double-up'></i>
+                                            <i style="float: right"class='fa fa-angle-double-down'></i></div>
+                                        <div class="panel-body" style="padding: 10px 1px 1px 1px;" >
+                                            <div class="col-lg-12">
+                                                <table class="table table-bordered md-caption" style="text-align: center">
+                                                    <tr class="info">
+                                                        <td rowspan="2">SUBJECT CODE AND NAME</td>
+                                                        <td colspan="3">TERM I - GRADE</td>
+                                                        <td colspan="3">TERM II - GRADE</td>
+                                                        <td colspan="2">OVERALL - TERM I + TERM II</td>
+                                                    </tr>
+                                                    <tr class="danger">
+                                                        <td>PA 1</td>
+                                                        <td>Half Yearly</td>
+                                                        <td>TOT-1</td>
+                                                        <td>PA 2</td>
+                                                        <td>Annual</td>
+                                                        <td>TOT-2</td>
+                                                        <td>Overall Grade</td>
+                                                        <td>Grade Point (GP)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>(101) English</td>
+                                                        <td>A1</td>
+                                                        <td>A2</td>
+                                                        <td>A2</td>
+                                                        <td>B2</td>
+                                                        <td>A2</td>
+                                                        <td>A2</td>
+                                                        <td>A1**</td>
+                                                        <td>10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>(002) HINDI</td>
+                                                        <td>A1</td>
+                                                        <td>A2</td>
+                                                        <td>A2</td>
+                                                        <td>A2</td>
+                                                        <td>A2</td>
+                                                        <td>A2</td>
+                                                        <td>A2</td>
+                                                        <td>9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>(041) MATHEMATICS</td>
+                                                        <td>B1</td>
+                                                        <td>A2</td>
+                                                        <td>A2</td>
+                                                        <td>A2</td>
+                                                        <td>B2</td>
+                                                        <td>A2</td>
+                                                        <td>A2**</td>
+                                                        <td>9</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="panel panel-primary" >
+                                        <div class="panel-heading" ng-click="showCo = ! showCo">Academic Performance: Co-Scholastic Areas
+                                            <i style="float: right" class='fa fa-angle-double-up'></i>
+                                            <i style="float: right"class='fa fa-angle-double-down'></i></div>
+                                        <div class="panel-body" ng-show="showCo" style="padding: 10px 1px 1px 1px;" >
+                                            <div class="col-lg-12">
+                                                <table class="table table-bordered">
+                                                    <p align='center' class='h5'>Co-Scholastic Areas: on a 3-point [ A - C ] grading scale</p>
+                                                    <tr class="info">
+                                                        <td align="center" colspan="2">Term 1</td>
+                                                        <td align="center" colspan="2">Term 2</td>
+                                                    </tr>
+                                                    <tr class="danger">
+                                                        <td>
+                                                            SELF AWARENESS
+                                                        </td>
+                                                        <td>Grade</td>
+                                                        <td >
+                                                            SELF AWARENESS
+                                                        </td>
+                                                        <td>Grade</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Is aware of his/her physical/social and emotional self</td>
+                                                        <td>A</td>
+                                                        <td>Is aware of his/her physical/social and emotional self</td>
+                                                        <td>A</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Self respecting</td>
+                                                        <td>A</td>
+                                                        <td>Self respecting</td>
+                                                        <td>A</td>
+                                                    </tr>
+                                                    <tr class="danger">
+                                                        <td >
+                                                            PROBLEM SOLVING
+                                                        </td>
+                                                        <td>Grade</td>
+                                                        <td >
+                                                            PROBLEM SOLVING
+                                                        </td>
+                                                        <td>Grade</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Finds a workable solution to the problem</td>
+                                                        <td>A</td>
+                                                        <td>Finds a workable solution to the problem</td>
+                                                        <td>B</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="panel panel-primary"  ng-controller="attendanceCtrl">
+                                        <div class="panel-heading" ng-click="showAtten = ! showAtten">Attendance</div>
+                                        <div class="panel-body" ng-show="showAtten">
+                                            <div class="col-lg-6">
                                                 <canvas  id="line" class="chart chart-line" chart-data="data"
                                                          chart-labels="labels" chart-series="series" chart-options="options"
                                                          chart-dataset-override="datasetOverride" chart-click="onClick">
@@ -355,85 +474,6 @@
                                                     <tr>
                                                         <td class="md-subhead">Minimum required: 75 %</td>
                                                         <td class="md-title" style="color: #008000">Current: 81 %</td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="panel panel-primary" >
-                                        <div class="panel-heading" ng-click="showAca = !showAca">Academic Performance: Scholastic Areas
-                                            <i style="float: right" class='fa fa-angle-double-up'></i>
-                                            <i style="float: right"class='fa fa-angle-double-down'></i></div>
-                                        <div class="panel-body" style="padding: 10px 1px 1px 1px;" ng-show="showAca">
-                                            <div class="col-lg-12">
-                                                <table class="table table-bordered md-caption">
-                                                    <tr>
-                                                        <td rowspan="2">SUBJECT CODE AND NAME</td>
-                                                        <td colspan="4">TERM I - GRADE</td>
-                                                        <td colspan="4">TERM II - GRADE</td>
-                                                        <td colspan="4">OVERALL - TERM I + TERM II</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>FA 1</td>
-                                                        <td>FA 2</td>
-                                                        <td>SA 1</td>
-                                                        <td>TOT-1</td>
-                                                        <td>FA 3</td>
-                                                        <td>FA 4</td>
-                                                        <td>SA 2</td>
-                                                        <td>TOT-2</td>
-                                                        <td>FA</td>
-                                                        <td>SA</td>
-                                                        <td>Overall Grade</td>
-                                                        <td>Grade Point (GP)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>(101) English</td>
-                                                        <td>A1</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>B2</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>A1**</td>
-                                                        <td>10</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>(002) HINDI</td>
-                                                        <td>A1</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>9</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>(041) MATHEMATICS</td>
-                                                        <td>B1</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>B2</td>
-                                                        <td>A2</td>
-                                                        <td>A2</td>
-                                                        <td>B2</td>
-                                                        <td>A2</td>
-                                                        <td>A2**</td>
-                                                        <td>9</td>
                                                     </tr>
                                                 </table>
                                             </div>
@@ -990,29 +1030,29 @@
                                     <div class="panel-body" ng-show="showAppoint">
                                         <div class="col-lg-12">
                                             <div class="table-responsive">
-                                            <table class="table" style="text-align: center">
-                                                <tr>
-                                                    <td>S.no</td>
-                                                    <td>Appointment By</td>
-                                                    <td>Date/Time</td>
-                                                    <td>Case</td>
-                                                    <td>More</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1.</td>
-                                                    <td>Ashok Kumar [Principle]</td>
-                                                    <td class="h5">15-02-2017 11:00 AM - 11:30 AM</td>
-                                                    <td>Open</td>
-                                                    <td>
-                                                <md-button ng-click="showModal()" class="md-icon-button md-accent" aria-label="Favorite">
-                                                    <i class="fa fa-desktop md-title">
-                                                        <md-tooltip md-direction="bottom">Show Thread</md-tooltip>
-                                                    </i>
-                                                </md-button>
-                                                </td>
+                                                <table class="table" style="text-align: center">
+                                                    <tr>
+                                                        <td>S.no</td>
+                                                        <td>Appointment By</td>
+                                                        <td>Date/Time</td>
+                                                        <td>Case</td>
+                                                        <td>More</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1.</td>
+                                                        <td>Ashok Kumar [Principle]</td>
+                                                        <td class="h5">15-02-2017 11:00 AM - 11:30 AM</td>
+                                                        <td>Open</td>
+                                                        <td>
+                                                    <md-button ng-click="showModal()" class="md-icon-button md-accent" aria-label="Favorite">
+                                                        <i class="fa fa-desktop md-title">
+                                                            <md-tooltip md-direction="bottom">Show Thread</md-tooltip>
+                                                        </i>
+                                                    </md-button>
+                                                    </td>
 
-                                                </tr>
-                                            </table>
+                                                    </tr>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>

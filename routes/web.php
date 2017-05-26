@@ -105,6 +105,7 @@ Route::get('co_scholastic_master', function(){
 Route::get('co_scholastic_assoc', function(){
     return View::make('academics.coScholasticAssoc');
 });
+
 Route::get('create_co_scholastic_assoc', function(){
     return View::make('academics.createcoScholasticAssoc');
 });
@@ -115,4 +116,21 @@ Route::get('marks_distribution', function(){
 
 Route::get('create_marks_distribution', function(){
     return View::make('academics.createMarksDistribution');
+});
+
+Route::get('input_marks', function(){
+    return View::make('academics.inputMarks');
+});
+
+Route::get('display_marks', function(){
+    return View::make('academics.displayMarks');
+});
+
+Route::get('green_sheet', function(){
+    return View::make('academics.greenSheet');
+});
+
+
+Route::get('verifiy_marks', function(){
+    return View::make('admin.verifyMarks');
 });
