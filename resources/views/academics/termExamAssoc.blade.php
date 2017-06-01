@@ -119,8 +119,8 @@
                             </div>
                             <div class="col-lg-5">
                                 <md-input-container class="md-block" > 
-                                    <label>Select Classes</label>&nbsp;
-                                    <select ui-select2 multiple  ng-model="past.class" required >
+                                    <label></label>
+                                    <select ui-select2 multiple  ng-model="past.class" required placeholder="Select Classes">
                                         <option  ng-value="class.id">NR</option>
                                         <option  ng-value="class.id">KG</option>
                                         <option  ng-value="class.id">I</option>
@@ -146,7 +146,6 @@
                                 </md-button>
                             </div>
                         </div>
-
                     </div>
 
 
@@ -161,7 +160,6 @@
         </div>
     </div>  
 </div>
-</div>
-</div>
+
 <br><br><br>
 @endsection

@@ -37,7 +37,7 @@
 
 
                     <script>
-                        window.Laravel = <?php
+                                window.Laravel = <?php
 echo json_encode([
     'csrfToken' => csrf_token(),
 ]);
@@ -99,27 +99,28 @@ echo json_encode([
                             <div class="d-header">
                                 <div class="d-header_info">
                                     <div class="container-fluid">
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                                            <div class="col-xs-12 col-sm-2 col-md-4 col-lg-2 d-logo" >
-                                                <a href="{{url('/home')}}"><img style="height: 40px;" src="{{url('')}}/assets/images/logo.png" alt="" class="img-responsive"></a>
-                                            </div>
-                                            <span class="hidden-md hidden-lg clearfix">&nbsp</span>
-                                            <div class="d-main_menu" style="padding-top: 10px;">
+                                        <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 d-logo col-lg-offset-1 logo-circle">
+                                            <a href="{{url('')}}"><img src="{{url('assets/images/logo.png')}}"  style="padding-top: 5px;height: 48px;" alt="" class="img-responsive"></a>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" style="padding-top: 20px;">
+                                            <div class="d-main_menu">
                                                 <nav>
                                                     <ul>
-                                                        <li><a href="index.html">Home</a></li>
+                                                        <li><a href="#">Home</a></li>
                                                         <li><a href="#">About</a></li>
                                                         <li><a href="#">Contact</a></li>
                                                     </ul>
                                                 </nav>
                                             </div>
                                         </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right" style="padding-top: 10px;">
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 pull-right">
                                             <div class="d-top_user" ng-controller="Notification as ctrl">
-                                                <img src="{{url('')}}/assets/images/father.jpg" class="menu-icon img-responsive" alt=""> 
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle" type="button" data-toggle="dropdown">HI, {{Auth::user()->fname}} 
-                                                            &nbsp;<i class="fa fa-chevron-down"></i></span>
+
+                                                <div class="dropdown">
+                                                    <md-button class="style-button" type="button" data-toggle="dropdown">
+                                                    <img src="{{url('')}}/assets/images/father.jpg" class="menu-icon img-responsive" alt=""> 
+                                                        HI, {{Auth::user()->fname}} 
+                                                            &nbsp;<i class="fa fa-chevron-down"></i></md-button>
                                                         <ul class="dropdown-menu"> 
                                                             <li style="background-color: #d0d0d0"><a>[ System Admin ]</a></li>
                                                             <li ><a href="user_profile.html">
@@ -128,17 +129,17 @@ echo json_encode([
                                                                     <i class="fa fa-lock"></i> &nbsp; &nbsp;Change Password</a></li> 
                                                             <li><a href="{{ url('/logout')}}"
                                                                    onclick="event.preventDefault();
-                                                                                   document.getElementById('logout-form').submit();">
+                                                                                               document.getElementById('logout-form').submit();">
                                                                     <i class="fa fa-sign-out"></i> &nbsp;       Logout
                                                                 </a><form id="logout-form" action="{{ url('/logout')}}" method="POST" style="display: none;">
                                                                     {{ csrf_field()}}
                                                                 </form></li> 
                                                         </ul>
-                                                    </div>
-                                                    <span class="d-notification_icon" ng-click="openRightMenu()">
-                                                        <i class="fa fa-bell" aria-hidden="true"></i>
-                                                        <em>10</em>
-                                                    </span>
+                                                </div>
+                                                <span class="d-notification_icon" ng-click="openRightMenu()">
+                                                    <i class="fa fa-bell" aria-hidden="true"></i>
+                                                    <em>10</em>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -160,10 +161,12 @@ echo json_encode([
                                                         <li>
                                                             <md-menu-bar>
                                                                 <md-menu>
-                                                                    <a href="#" class="md-button dropdown-toggle" style="padding-top: 2px; color: #fff" ng-click="$mdOpenMenu()"><i class="fa fa-file-o"></i> &nbsp; Academics <b class="caret"></b></a>
+                                                                    <md-button class="dropdown-toggle style-menu-button" data-toggle="dropdown" ng-click="$mdOpenMenu()"><i class="fa fa-file-o"></i> &nbsp; Academics <b class="caret"></b></md-button>
+                                                                    
                                                                     <md-menu-content>           
                                                                         <md-menu-item>
                                                                             <md-menu>
+                                                                                
                                                                                 <a class="md-button" ng-click="$mdOpenMenu()">Time Table</a>
                                                                                 <md-menu-content>
                                                                                     <md-menu-item><a class="md-button" href="{{url('/timetable_season_group')}}">Timetable Date Range</a></md-menu-item>
@@ -183,11 +186,11 @@ echo json_encode([
                                                                         </md-menu-item>
                                                                         <md-menu-item>
                                                                             <md-menu>
-                                                                                <a  ng-click="$mdOpenMenu()" class="md-button">Syllabus</a>
-                                                                                <md-menu-content>
+                                                                                <a href="{{url('course_topic_distribution')}}" ng-click="$mdOpenMenu()" class="md-button">Syllabus</a>
+                                                                                <!--<md-menu-content>
                                                                                     <md-menu-item><a class="md-button" href="{{url('set_course')}}">Course Structure</a></md-menu-item>
-                                                                                    <md-menu-item><a class="md-button" href="{{url('course_topic_distribution')}}">Course Topic Distribution</a></md-menu-item>
-                                                                                </md-menu-content>
+                                                                                    <md-menu-item><a class="md-button" href="{{url('course_topic_distribution')}}">Course Mapping</a></md-menu-item>
+                                                                                </md-menu-content>-->
                                                                             </md-menu>
                                                                         </md-menu-item>
 
@@ -241,7 +244,7 @@ echo json_encode([
                                                         </li>
 
                                                         <li> 
-                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-phone"></i>  &nbsp; Communication<b class="caret"></b></a>
+                                                            <md-button class="dropdown-toggle style-menu-button" data-toggle="dropdown"><i class="fa fa-phone"></i>  &nbsp; Communication<b class="caret"></b></md-button>
                                                             <ul class="dropdown-menu">
                                                                 <li><a href="phone_log">Phone Log</a></li>
                                                                 <li><a href="other_log">Other Log</a></li>
@@ -249,7 +252,7 @@ echo json_encode([
                                                             </ul>
                                                         </li>
                                                         <li> 
-                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-wrench"></i>  &nbsp; Admin &nbsp;<b class="caret"></b></a>
+                                                           <md-button class="dropdown-toggle style-menu-button" data-toggle="dropdown"><i class="fa fa-wrench"></i>  &nbsp; Admin &nbsp;<b class="caret"></b></md-button>
                                                             <ul class="dropdown-menu">
                                                                 <li><a href="verifiy_marks">Verify Marks</a></li>
                                                             </ul>
@@ -261,10 +264,11 @@ echo json_encode([
                                                              </ul>
                                                          </li>-->
                                                         <li>
-                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>  &nbsp;Student <b class="caret"></b></a>
+                                                            <md-button class="dropdown-toggle style-menu-button" data-toggle="dropdown"><i class="fa fa-user"></i>  &nbsp;Student <b class="caret"></b></md-button>
                                                             <ul class="dropdown-menu">
                                                                 <li><a href="{{url('/create_student')}}">Create Student</a></li>
                                                                 <li><a href="{{url('/student_profile')}}">Student Profile</a></li>
+                                                                <li><a href="{{url('/student_registration')}}">Online Student Registration</a></li>
                                                                 <li><a href="{{url('/daily_report')}}">Daily Report</a></li>
                                                             </ul>
                                                         </li>
@@ -346,17 +350,17 @@ echo json_encode([
 
                         <?php if (!\Cookie::get('timezone')) { ?>
                             <script type="text/javascript">
-                                $(document).ready(function () {
-                                    var visitortime = new Date();
-                                    var visitortimezone = -visitortime.getTimezoneOffset() / 60;
-                                    $.ajax({
+                                        $(document).ready(function () {
+                                var visitortime = new Date();
+                                        var visitortimezone = - visitortime.getTimezoneOffset() / 60;
+                                        $.ajax({
                                         type: "GET",
-                                        url: "<?php echo url(''); ?>/updatetimezone/" + visitortimezone,
-                                        data: 'time=' + visitortimezone,
-                                        success: function () {
-                                            location.reload();
-                                        }
-                                    });
+                                                url: "<?php echo url(''); ?>/updatetimezone/" + visitortimezone,
+                                                data: 'time=' + visitortimezone,
+                                                success: function () {
+                                                location.reload();
+                                                }
+                                        });
                                 });
                             </script>
                         <?php } ?>

@@ -31,8 +31,8 @@
                         </div>
                         <div class="col-lg-3">
                             <md-input-container class="md-block" > 
-                                <label>Select Classes</label>&nbsp;
-                                <select ui-select2 multiple  ng-model="past.class" required >
+                                <label></label>
+                                <select ui-select2 multiple  ng-model="past.class" placeholder="Select Classes" required >
                                     <option  ng-value="class.id">NR</option>
                                     <option  ng-value="class.id">KG</option>
                                     <option  ng-value="class.id">I</option>
@@ -42,8 +42,8 @@
                         </div>
                         <div class="col-lg-3">
                             <md-input-container class="md-block" > 
-                                <label>Select Section</label>&nbsp;
-                                <select ui-select2 multiple  ng-model="past.section" required >
+                                <label></label>
+                                <select ui-select2 multiple placeholder="Select Section" ng-model="past.section" required >
                                     <option  ng-value="class.id">A</option>
                                     <option  ng-value="class.id">B</option>
                                     <option  ng-value="class.id">C</option>

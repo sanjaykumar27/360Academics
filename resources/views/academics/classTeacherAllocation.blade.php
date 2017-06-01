@@ -54,7 +54,7 @@
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
                                 <md-input-container class="md-block " flex-gt-sm>
-                                    <label>Class</label>&nbsp;
+                                    <label>Section</label>&nbsp;
                                     <select ui-select2 ng-model="singledata.section"   required >
                                         <option ng-value="class.id">A</option>
                                         <option ng-value="class.id">B</option>
@@ -122,7 +122,7 @@
                 <div class="modal-content"> 
                     <div class="modal-body clearfix">
                         <div class="panel panel-primary">
-                            <div class="panel-heading">Create Class Teacher</div>
+                            <div class="panel-heading">Create Subject / Class Teacher</div>
                             <div class="panel-body">
                                 <div class="row" ng-repeat="data in singledata.add">
                                     <div class="col-lg-2">
@@ -139,8 +139,8 @@
 
                                     <div class="col-lg-2">
                                         <md-input-container class="md-block">
-                                            <label>Section</label>&nbsp;
-                                            <select ui-select2 ng-model="singledata.Section" multiple required >
+                                            <label></label>
+                                            <select placeholder="Section" ui-select2 ng-model="singledata.Section" multiple required >
                                                 <option ng-value="section.id">A</option>
                                                 <option ng-value="section.id">B</option>
                                                 <option ng-value="section.id">C</option>
@@ -168,14 +168,14 @@
                                         </md-input-container>
                                     </div>
                                     <div class="col-lg-2">
-                                        <span class="clearfix">&nbsp;<br><br></span>
+                                        <span class="clearfix">&nbsp;<br></span>
                                         <md-switch ng-model="singledata.status"  aria-label="Switch 2" ng-true-value="'Class Teacher'" ng-false-value="'Subject Teacher'" class="md-warn">
                                             @{{ singledata.status}}
                                         </md-switch>
                                     </div>
 
                                     <div class="col-xs-2 col-sm-2 col-md-2 col-lg-1" ng-show="$index == 0">
-                                        <span class="clearfix">&nbsp;<br><br><br></span>
+                                        <span class="clearfix">&nbsp;<br><br></span>
                                         <md-button aria-label="edit" class="md-fab md-mini md-raised md-mini" ng-click="addplus()"  >
                                             <i class="material-icons">add</i>
                                             <md-tooltip md-visible="demo.add_row" md-direction="" >

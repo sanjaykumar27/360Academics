@@ -8,7 +8,6 @@
             <div class="md-toolbar-tools"> 
                 <h2>
                     <span>@{{formtype}} Class Subject Teacher Association</span>
-                  
                 </h2> 
             </div>
         </md-toolbar>  

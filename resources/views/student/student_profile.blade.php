@@ -54,9 +54,9 @@
                     </md-card-header>
                     <md-card-header>
                         <p><a href=''>
-                                <img class="menu-icon " src="{{url('assets/images/profile_pic.jpg')}}"></a>
+                                <img class="parent-icon " src="{{url('assets/images/profile_pic.jpg')}}"></a>
                         <md-tooltip md-direction="top">Mother</md-tooltip></p> &nbsp;&nbsp;
-                        <p><a href=''><img class="menu-icon " src="{{url('assets/images/father.jpg')}}">
+                        <p><a href=''><img class="parent-icon " src="{{url('assets/images/father.jpg')}}">
                             </a>
                         <md-tooltip md-direction="top">Father</md-tooltip></p>
                         <md-button aria-label="edit" class="md-fab md-mini md-raised md-mini">
@@ -76,7 +76,7 @@
                         <span class="md-headline">&nbsp;Siblings</span>
                     </md-card-header>
                     <md-card-header>
-                        <p><a href=''><img class="menu-icon " src="{{url('assets/images/brother.jpg')}}">
+                        <p><a href=''><img class="parent-icon " src="{{url('assets/images/brother.jpg')}}">
                             </a>
                         <md-tooltip md-direction="top">Brother</md-tooltip></p>
                         <md-button aria-label="edit" ng-click="editrecords(data)" class="md-fab md-mini md-raised md-mini">

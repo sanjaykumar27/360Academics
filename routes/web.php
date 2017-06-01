@@ -35,7 +35,7 @@ Route::get('get_studenttype', 'CreateStudentController@getStudentType');
 Route::get('get_suburb', 'CreateStudentController@getSuburb');
 
 Route::get('sub_teach_assoc', 'timetable@createClassSubAssoc');
-Route::get('timetable_season_group',function(){
+Route::get('timetable_season_group', function() {
     return View::make('academics.createSeasonGroup');
 });
 
@@ -55,82 +55,102 @@ Route::post('collection_save', 'CollectionController@collectionSave');
 Route::get('season_collection', 'timetable@getSeason');
 Route::get('get_season', 'timetable@collectionIndex');
 
-Route::get('student_profile','StudentProfile@index');
+Route::get('student_profile', 'StudentProfile@index');
 
-Route::get('other_log','Communication@otherlogIndex');
-Route::get('phone_log','Communication@phonelogIndex');
-Route::get('appointment','Communication@appointmentIndex');
+Route::get('other_log', 'Communication@otherlogIndex');
+Route::get('phone_log', 'Communication@phonelogIndex');
+Route::get('appointment', 'Communication@appointmentIndex');
 
-Route::get('showother_log','Communication@otherlogIndex');
-Route::get('phone_log','Communication@phonelogIndex');
-Route::get('appointment','Communication@appointmentIndex');
+Route::get('showother_log', 'Communication@otherlogIndex');
+Route::get('phone_log', 'Communication@phonelogIndex');
+Route::get('appointment', 'Communication@appointmentIndex');
 
-Route::get('view_timetable','timetable@view_timetable');
+Route::get('view_timetable', 'timetable@view_timetable');
 
-Route::get('timetable_master','timetable@timetableMaster');
-Route::get('class_teacher_allocation','timetable@classTeacherAllocation');
+Route::get('timetable_master', 'timetable@timetableMaster');
+Route::get('class_teacher_allocation', 'timetable@classTeacherAllocation');
 
-Route::get('set_term','Examination@setTerm');
-Route::get('term_exam_assoc','Examination@termexamAssoc');
-Route::get('create_exam','Examination@createExam');
-Route::get('create_exam_notes','Examination@createExamNotes');
+Route::get('set_term', 'Examination@setTerm');
+Route::get('term_exam_assoc', 'Examination@termexamAssoc');
+Route::get('create_exam', 'Examination@createExam');
+Route::get('create_exam_notes', 'Examination@createExamNotes');
 
-Route::get('exam_timetable','Examination@createTimetable');
+Route::get('exam_timetable', 'Examination@createTimetable');
 
-Route::get('set_course','Examination@createCourse');
-Route::get('course_topic_distribution','Examination@createCourseTopic');
+Route::get('set_course', 'Examination@createCourse');
+Route::get('course_topic_distribution', 'Examination@createCourseTopic');
 
-Route::get('exam_blueprint','Examination@examBluePrint');
+Route::get('exam_blueprint', 'Examination@examBluePrint');
 
-Route::get('view_exam_blueprint','Examination@viewexamBluePrint');
-Route::get('create_questionpaper_blueprint','Examination@createQuestionPaperBluePrint');
+Route::get('view_exam_blueprint', 'Examination@viewexamBluePrint');
+Route::get('create_questionpaper_blueprint', 'Examination@createQuestionPaperBluePrint');
 
 // -------------------------------- TEST ------------------------------------ // 
-Route::get('feecollection', function(){
+Route::get('feecollection', function() {
     return View::make('test.feecollection');
 });
 
-Route::get('daily_report', function(){
+Route::get('daily_report', function() {
     return View::make('reports.dailyReport');
 });
 
-Route::get('mark_attendance', function(){
+Route::get('mark_attendance', function() {
     return View::make('academics.markAttendance');
 });
 
-Route::get('co_scholastic_master', function(){
+Route::get('co_scholastic_master', function() {
     return View::make('academics.coScholasticMaster');
 });
 
-Route::get('co_scholastic_assoc', function(){
+Route::get('co_scholastic_assoc', function() {
     return View::make('academics.coScholasticAssoc');
 });
 
-Route::get('create_co_scholastic_assoc', function(){
-    return View::make('academics.createcoScholasticAssoc');
+Route::get('create_co_scholastic_assoc', function() {
+    return View::make('academics.createCoScholasticAssoc');
 });
 
-Route::get('marks_distribution', function(){
+Route::get('marks_distribution', function() {
     return View::make('academics.marksDistribution');
 });
 
-Route::get('create_marks_distribution', function(){
+Route::get('create_marks_distribution', function() {
     return View::make('academics.createMarksDistribution');
 });
 
-Route::get('input_marks', function(){
+Route::get('input_marks', function() {
     return View::make('academics.inputMarks');
 });
 
-Route::get('display_marks', function(){
+Route::get('display_marks', function() {
     return View::make('academics.displayMarks');
 });
 
-Route::get('green_sheet', function(){
+Route::get('green_sheet', function() {
     return View::make('academics.greenSheet');
 });
 
 
-Route::get('verifiy_marks', function(){
+Route::get('verifiy_marks', function() {
     return View::make('admin.verifyMarks');
+});
+
+Route::get('course_mapping', function() {
+    return View::make('academics.courseMapping');
+});
+
+Route::get('student_registration',  function (){
+    return View::make('student.studentOnlineRegistration');
+});
+
+Route::get('student_registration_review',  function (){
+    return View::make('student.studentOnlineRegistrationReview');
+});
+
+Route::get('student_registration_confirmation',  function (){
+    return View::make('student.studentOnlineRegistrationConfirmation');
+});
+
+Route::get('print_registration_form',  function (){
+    return View::make('student.printRegistrationForm');
 });

@@ -1,3 +1,25 @@
+app.controller('onlinestudentregistration' ,function ($scope){
+    function DemoCtrl () {
+    var _this = this;
+    
+    _this.a = true;
+    _this.sample = ['1', '3', '5'];
+  }
+  
+  $scope.path = $('#path').val();
+    $scope.paynow = function (detail) {
+        var left = (screen.width / 2) - (1800 / 2);
+        var top = (screen.height / 2) - (500 / 2);
+        var sw = (screen.width * .80);
+        var sh = (screen.height * .65);
+        var url = $scope.path + '/print_registration_form';
+        window.open(url, 'pop-up', 'width=' + sw + ', height=' + sh + ', top=' + top + ', left=' + left);
+    };
+});
+
+
+
+
 app.controller('appointment' ,function ($scope){
     
 });
