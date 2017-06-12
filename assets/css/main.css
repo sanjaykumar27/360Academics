@@ -593,12 +593,12 @@ h6 {
 }
 
 .panel-primary {
-    border-color: #5aa6eb;
+    border-color: #1EBFAE;
 }
 
 .panel-primary > .panel-heading {
-    background-color: #0E67BF;
-    border-color: #0E67BF;
+    background-color: #1EBFAE;
+    border-color: #1EBFAE;
 }
 
 .panel-heading {
@@ -688,7 +688,7 @@ HEADER
     background-color: #0E67BF;
 }
 .d-header {
-    background-color: #0E67BF;
+    background-color: #1EBFAE;
 }
 
 .d-login_page.d-login_page {
@@ -703,7 +703,7 @@ HEADER
 
 
 .d-header_info {
-    background-color: #34475A;
+    background-color: #2980B9;
 
 }
 
@@ -844,7 +844,7 @@ HEADER
     padding: 0;
     position: absolute;
     left: 0;
-    background-color: #0e67bf;
+    background-color: #1EBFAE;
     min-width: 200px;
     z-index: 9999; }
 .d-nav nav > ul > li > ul > li > a {
@@ -941,7 +941,7 @@ HEADER
         background-color: #5aa6eb;
     }
     .navbar-default .navbar-nav > li .dropdown-menu {
-        background-color: #0E67BF;
+        background-color: #1EBFAE;
         padding: 0;
         border: none;
         border-radius: 0;
@@ -951,7 +951,7 @@ HEADER
         padding: 8px 13px;
     }
     .navbar-default .navbar-nav > li .dropdown-menu > li > a:hover {
-        background: #5aa6eb;
+        background: #20a093;
         color: #fff;
     }
     .navbar-right .dropdown-menu {
@@ -1285,7 +1285,7 @@ th {
 .d-listing_toolbar {
     display: block;
     margin-bottom: 10px;
-    background: #5aa6eb !important;
+    background: #1EBFAE !important;
 }
 
 .d-listing_toolbar .d-listing_toolbar_title > span {
@@ -2260,14 +2260,14 @@ md-input-container.d-validation-error label.md-required:not(.md-container-ignore
 
 /*# sourceMappingURL=main.css.map */
 .style-button{
-    background-color: #34475A;
+    background-color: #2980B9;
     height: 60px;
 
 }
 
 
 .style-menu-button{
-    background-color: #0E67BF;
+    background-color: #1EBFAE;
     height: 45px;
     color: #fff;
     display: inline-block;

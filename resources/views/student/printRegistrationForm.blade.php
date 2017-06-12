@@ -179,7 +179,7 @@
                     <td class="h5" colspan="4" style="background-color: #f4f4f4"><b>General Details</b></td>
                 </tr>
                 <tr>
-                    <td>Student Name: </td><td style="font-size: 14px"><b>Sanjay Kumar Chaurasia</b></td>
+                    <td>Student Name: </td><td><b>Sanjay Kumar Chaurasia</b></td>
                     <td>Gender: </td><td><b>Male</b></td>
                 </tr>
                 <tr>
@@ -213,7 +213,7 @@
                     <td colspan="4"  class="h5" style="background-color: #f4f4f4"><b>Father's Details</b></td>
                 </tr>
                 <tr>
-                    <td>Name : </td><td style="font-size: 14px"><b>Ram Murat Chaurasia</b></td>
+                    <td>Name : </td><td ><b>Ram Murat Chaurasia</b></td>
                     <td>Email : </td><td><b>abcd@gmail.com</b></td>
                 </tr>
                 <tr>
@@ -346,9 +346,7 @@
                         <tr>
                             <td width="20%">Admitted to standard</td>
                             <td ></td>
-                            
                             <td width="6%">Section</td>
-                            
                             <td ></td>
                             <td width="6%">Stream</td>
                             <td ></td>
@@ -360,10 +358,8 @@
                         <tr>
                             <td width="16%">Fee Reciept No</td>
                             <td ></td>
-                            
                             <td width="5%">Dated</td>
                             <td ></td>
-                            
                             <td width="7%">for Rs</td>
                             <td ></td>
                         </tr>
@@ -382,9 +378,6 @@
                             <td align="center">Principal</td>
                         </tr>
                     </table>
-
-                    
-
                     </page>
 
 

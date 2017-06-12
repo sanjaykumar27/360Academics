@@ -18,7 +18,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('home', 'HomeController@index');
+Route::get('teacherHome', function(){
+    return view('teacherHome');
+});
 
+Route::get('parentHome', function(){
+    return view('parentHome');
+});
 
 
 Route::get('updatetimezone/{time}', function ($time) {
@@ -153,4 +159,12 @@ Route::get('student_registration_confirmation',  function (){
 
 Route::get('print_registration_form',  function (){
     return View::make('student.printRegistrationForm');
+});
+
+Route::get('verify_student_registration',  function (){
+    return View::make('admin.studentRegistration');
+});
+
+Route::get('set_syllabus',  function (){
+    return View::make('admin.setSyllabus');
 });

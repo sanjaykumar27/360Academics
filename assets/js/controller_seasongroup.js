@@ -1,8 +1,4 @@
 (function($, undefined) {
-
-
-
-
 var defaults = {
 
 	// display
@@ -175,7 +171,6 @@ function setDefaults(d) {
  
 function Calendar(element, options, eventSources) {
 	var t = this;
-	
 	
 	// exports
 	t.options = options;

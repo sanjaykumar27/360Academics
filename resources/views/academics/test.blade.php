@@ -12,12 +12,8 @@
         var y = date.getFullYear();
 
         /*  className colors
-         
          className: default(transparent), important(red), chill(pink), success(green), info(blue)
-         
          */
-
-
         /* initialize the external events
          -----------------------------------------------------------------*/
 
@@ -40,7 +36,6 @@
             });
 
         });
-
 
         /* initialize the calendar
          -----------------------------------------------------------------*/
@@ -157,8 +152,6 @@
                 }
             ],
         });
-
-
     });
 
 </script>
@@ -221,12 +214,10 @@
 <div class="container-d">
     <div class="container">
         <div id='wrap'>
-
             <div id='calendar'></div>
-
             <div style='clear:both'></div>
         </div>
     </div>
-
+</div>
     <br><br><br><br><br><br>
     @endsection

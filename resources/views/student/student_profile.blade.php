@@ -488,80 +488,99 @@
                                             <i style="float: right"class='fa fa-angle-double-down'></i></div>
                                         <div class="panel-body" ng-show="showTime">
                                             <div class="col-lg-12" >
-                                                <table class="table table-bordered table-striped md-caption">
-                                                    <tr>
-                                                        <td>Period / Day</td>
-                                                        <td>Monday</td>
-                                                        <td>Tuesday</td>
-                                                        <td>Wednesday</td>
-                                                        <td>Thursday</td>
-                                                        <td>Friday</td>
-                                                        <td>Saturday</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>I</td>
-                                                        <td>English
-                                                            <p class="md-caption" align="right"> -Anuradha Singh</p>
-                                                        </td>
-                                                        <td>English
-                                                            <p class="md-caption" align="right"> -Anuradha Singh</p>
-                                                        </td>
-                                                        <td>English
-                                                            <p class="md-caption" align="right"> -Anuradha Singh</p>
-                                                        </td>
-                                                        <td>English
-                                                            <p class="md-caption" align="right"> -Anuradha Singh</p>
-                                                        </td>
-                                                        <td>English
-                                                            <p class="md-caption" align="right"> -Anuradha Singh</p>
-                                                        </td>
-                                                        <td>English
-                                                            <p class="md-caption" align="right"> -Anuradha Singh</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>II</td>
-                                                        <td>Maths
-                                                            <p class="md-caption" align="right"> -Pankaj Bhargav</p>
-                                                        </td>
-                                                        <td>Maths
-                                                            <p class="md-caption" align="right"> -Pankaj Bhargav</p>
-                                                        </td>
-                                                        <td>Maths
-                                                            <p class="md-caption" align="right"> -Pankaj Bhargav</p>
-                                                        </td>
-                                                        <td>Maths
-                                                            <p class="md-caption" align="right"> -Pankaj Bhargav</p>
-                                                        </td>
-                                                        <td>Maths
-                                                            <p class="md-caption" align="right"> -Pankaj Bhargav</p>
-                                                        </td>
-                                                        <td>Maths
-                                                            <p class="md-caption" align="right"> -Pankaj Bhargav</p>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>II</td>
-                                                        <td>Hindi
-                                                            <p class="md-caption" align="right"> -Anil Tripathi</p>
-                                                        </td>
-                                                        <td>Hindi
-                                                            <p class="md-caption" align="right"> -Anil Tripathi</p>
-                                                        </td>
-                                                        <td>Hindi
-                                                            <p class="md-caption" align="right"> -Anil Tripathi</p>
-                                                        </td>
-                                                        <td>Games
-                                                            <p class="md-caption" align="right"> -Bhati sir</p>
-                                                        </td>
-                                                        <td>Music
-                                                            <p class="md-caption" align="right"> -Lata Soni</p>
-                                                        </td>
-                                                        <td>Hindi
-                                                            <p class="md-caption" align="right"> -Anil Tripathi</p>
-                                                        </td>
-                                                    </tr>
-                                                </table>
+                                                <table class="table table-bordered">
+                        <tr class="info">
+                            <td>Period / Day</td>
+                            <td>Time</td>
+                            <td>Monday</td>
+                            <td>Tuesday</td>
+                            <td>Wednesday</td>
+                            <td>Thursday</td>
+                            <td>Friday</td>
+                            <td>Saturday</td>
+                        </tr>
+                        <tr>
+                            <td>I</td>
+                            <td>[ 8:00 - 8:45 ]</td>
+                            <td>English</td>
+                            <td>English</td>
+                            <td>English</td>
+                            <td>English</td>
+                            <td>English</td>
+                            <td>English</td>
+                        </tr>
+                        <tr>
+                            <td>II</td>
+                            <td>[ 8:45 - 9:30 ]</td>
+                            <td>Hindi</td>
+                            <td>Hindi</td>
+                            <td>Hindi</td>
+                            <td>Hindi</td>
+                            <td>Hindi</td>
+                            <td>Hindi</td>
+                        </tr>
+                        <tr>
+                            <td>III</td>
+                            <td>[ 9:30 - 10:15 ]</td>
+                            <td>Maths</td>
+                            <td>Maths</td>
+                            <td>Maths</td>
+                            <td>Maths</td>
+                            <td>Maths</td>
+                            <td>Maths</td>
+                        </tr>
+                        <tr >
+                            <td>IV</td>
+                            <td>[ 10:15 - 11:00 ]</td>
+                            <td>S.St</td>
+                            <td>S.St</td>
+                            <td>S.St</td>
+                            <td>S.St</td>
+                            <td>S.St</td>
+                            <td>S.St</td>
+                        </tr>
+                        <tr class="success">
+                            <td>Recess</td>
+                            <td>[ 11:00 - 11:20 ]</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>V</td>
+                            <td>[ 11:20 - 12:00 ]</td>
+                            <td>Drawing</td>
+                            <td>Activity</td>
+                            <td>F.L</td>
+                            <td>Activity</td>
+                            <td>Drawing</td>
+                            <td>Activity</td>
+                        </tr>
+                        <tr>
+                            <td>VI</td>
+                            <td>[ 12:00 - 12:40 ]</td>
+                            <td>Science</td>
+                            <td>Science</td>
+                            <td>Science</td>
+                            <td>Science</td>
+                            <td>Science</td>
+                            <td>Science</td>
+                        </tr>
+                        <tr>
+                            <td>VII</td>
+                            <td>[ 12:40 - 13:20 ]</td>
+                            <td>Games</td>
+                            <td>Library</td>
+                            <td>Music</td>
+                            <td>Games</td>
+                            <td>Library</td>
+                            <td>Games</td>
+                        </tr>
+                    </table>
+					
                                             </div>
                                         </div>
                                     </div>
@@ -639,71 +658,59 @@
                                         <div class="panel-body">
                                             <div class="col-lg-12">
                                                 <table class="table table-bordered">
+												<thead>
                                                     <tr>
-                                                        <td rowspan="2">Fee Installments</td>
-                                                        <td >Fee Due</td>
-                                                        <td colspan="3" style="text-align: center">Fee Collected</td>
-                                                        <td>Action</td>
+                                                        <th>Installments</th>
+                                                        <th >Amount</th>
+														<th>Due Date</th>
+                                                        <th width="25%">Action</th>
                                                     </tr>
-                                                    <tr>
-                                                        <td><small>Amt (in INR)</small></td>
-                                                        <td>Amount</td>
-                                                        <td>Other Fees(<small>eg late fees, penalties etc)</small></td>
-                                                        <td>Total Fees</td>
-                                                        <td></td>
-
-                                                    </tr>
+													</thead>
+                                                    
                                                     <tr>
                                                         <td><b>April(I)</b></td>
-                                                        <td>-</td>
                                                         <td>&#8377 9860</td>
-                                                        <td>&#8377 1000</td>
-                                                        <td>&#8377 10860</td>
+                                                        <td>10-04-2016</td>
                                                         <td><md-button  class="md-raised md-primary" >View Reciept</md-button></td>
 
                                                     </tr>
                                                     <tr>
                                                         <td><b>July(II)</b></td>
-                                                        <td>-</td>
                                                         <td>&#8377 2860</td>
-                                                        <td>&#8377 1000</td>
-                                                        <td>&#8377 3860</td>
+                                                        <td>10-07-2016</td>
                                                         <td><md-button class="md-raised md-primary"  >View Reciept</md-button></td>
                                                     </tr>
                                                     <tr>
                                                         <td><b>August(III)</b></td>
                                                         <td>&#8377 2860</td>
-                                                        <td>-</td>
-                                                        <td>-</td>
-                                                        <td>-</td>
+                                                        <td>10-08-2016</td>
                                                         <td><md-button  class="md-raised md-primary" >Pay Now</md-button></td>
                                                     </tr>
 
                                                     <tr>
                                                         <td><b>September(IV)</b></td>
                                                         <td>&#8377 2860</td>
-                                                        <td>-</td>
-                                                        <td>-</td>
-                                                        <td>-</td>
+                                                        <td>10-09-2016</td>
                                                         <td><md-button  class="md-raised md-primary" >Pay Now</md-button></td>
                                                     </tr>
                                                 </table>
                                             </div>
 
                                             <div class="col-lg-12">
-                                                <table class="table">
+                                                <table class="table table-bordered">
+													
                                                     <tr>
-                                                        <td class="md-headline" style="color: #d02763">
-                                                            <p class="md-body-1">Total Fees Due - <span class="md-title">&#8377 18320</span></p>
+                                                        <td class="md-headline" >
+                                                            <p class="md-body-1">Total Fees Due - <span class="md-title" style="color: #d02763">&#8377 18320</span></p>
                                                         </td>
-                                                        <td class="md-subhead" style="color: #008000">
-                                                            <p class="md-subhead">Total Fees Collected - <span class="md-title">&#8377 14820</span></p>
+                                                        <td class="md-subhead" align="right" >
+                                                            <p class="md-subhead">Total Fees Collected - <span style="color: #008000" align="right" class="md-title">&#8377 14820</span></p>
                                                         </td>
                                                     </tr>
 
                                                     <tr>
-                                                        <td class="md-headline" style="color: #d02763">
-                                                            <p class="md-subhead"> Fee Rule(s) -  <span class="md-title" >Third Child  <md-button class="md-raised md-primary" style="float:right">Apply Rule(s)</md-button></span></p>
+                                                        <td class="md-headline" style="color: #d02763" colspan="2">
+                                                            <p class="md-subhead"> Fee Rule(s) -  <span class="md-title" >Third Child  <md-button class="md-raised md-primary" style="float:right">Apply Rule (s)</md-button></span></p>
 
                                                         </td>
                                                     </tr>
@@ -730,14 +737,14 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-4" style="padding-left: 10px; padding-right: 0px;" ng-controller="OtherFeePieCtrl">
+                                    <div class="col-lg-6" style="padding-left: 10px; padding-right: 0px;" ng-controller="OtherFeePieCtrl">
                                         <div class="panel panel-primary">
                                             <div class="panel-heading" ng-click="showotherFee = !showotherFee">Other Fee Collection
                                                 <i style="float: right" class="fa fa-angle-double-up"></i>
                                                 <i style="float: right" class="fa fa-angle-double-down"></i>
                                             </div>
-                                            <div class="panel-body" ng-show="showotherFee">
-                                                <canvas id="pie" class="chart chart-pie"
+                                            <div class="panel-body" ng-show="showotherFee" >
+                                                <canvas id="pie" class="chart chart-pie" style="height: 152px;"
                                                         chart-data="data" chart-labels="labels" chart-options="options">
                                                 </canvas> 
                                             </div>
@@ -768,7 +775,7 @@
                                                     <tr>
                                                         <td>1</td>
                                                         <td>Aadhar Card</td>
-                                                        <td><img class="imgzoom"  data-toggle="modal" data-target="#myModal" style="height: 100px; width: 150px;" src="{{url('assets/images/aadhar-card22.jpg')}}" ></td>
+                                                        <td><img class="imgzoom"  data-toggle="modal" data-target="#myModal" style="height: 70px; width: 110px;" src="{{url('assets/images/aadhar-card22.jpg')}}" ></td>
 
                                                     <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                         <div class="modal-dialog">
@@ -786,7 +793,7 @@
                                                     <tr>
                                                         <td>2</td>
                                                         <td>Birth Certificate</td>
-                                                        <td><img class="imgzoom" data-toggle="modal" data-target="#myModal2"  style="height: 100px; width: 150px;" src="{{url('assets/images/Birth_certificate(sample).png')}}" ></td>
+                                                        <td><img class="imgzoom" data-toggle="modal" data-target="#myModal2"  style="height: 70px; width: 110px;" src="{{url('assets/images/Birth_certificate(sample).png')}}" ></td>
                                                         <td><md-button class="md-raised md-primary">Update</md-button></td>
                                                     <div id="myModal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                         <div class="modal-dialog">
@@ -803,7 +810,7 @@
                                                     <tr>
                                                         <td>3</td>
                                                         <td>Transfer Certificate(T.C)</td>
-                                                        <td><img class="imgzoom"  data-toggle="modal" data-target="#myModal3" style="height: 100px; width: 150px;" src="{{url('assets/images/TC.jpg')}}" ></td>
+                                                        <td><img class="imgzoom"  data-toggle="modal" data-target="#myModal3" style="height: 70px; width: 110px;" src="{{url('assets/images/TC.jpg')}}" ></td>
                                                         <td><md-button class="md-raised md-primary">Update</md-button></td>
                                                     <div id="myModal3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                         <div class="modal-dialog">
@@ -819,7 +826,7 @@
                                                     <tr>
                                                         <td>4</td>
                                                         <td>Character Certificate</td>
-                                                        <td><img class="imgzoom"   data-toggle="modal" data-target="#myModal4" style="height: 100px; width: 150px;" src="{{url('assets/images/ch_certificate.png')}}" ></td>
+                                                        <td><img class="imgzoom"   data-toggle="modal" data-target="#myModal4" style="height: 70px; width: 110px;" src="{{url('assets/images/ch_certificate.png')}}" ></td>
                                                         <td><md-button  class="md-raised md-primary">Update</md-button></td>
                                                     <div id="myModal4" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                         <div class="modal-dialog">

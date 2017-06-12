@@ -15,7 +15,9 @@
                 <!-- CSS:: FONTS -->
                 <!-- CSS:: FONTS -->
                 <script type="text/javascript" src="{{url('')}}/assets/js/jquery.min.js"></script>   
-                <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/css/font-awesome.min.css"/>  
+                <link rel="stylesheet" type="text/css" href="{{url('')}}/assets/css/font-awesome.min.css"/> 
+                <link rel="stylesheet" type="text/css" href=" http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/> 
+
                 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500" rel="stylesheet"/> 
                 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
                 <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"/>
@@ -44,6 +46,13 @@ echo json_encode([
 ?>
                     </script>
                     <style>
+                        .panel-header {
+                            color: #666;
+                            border: none;
+                            position: relative;
+                            margin-bottom: 24px;
+                            box-shadow: 0 3px 3px 0 rgba(0,0,0,0.25);
+                        }
                         body.stop-scrolling{height: auto;}
                         #loader { display: none;background-color:#000 !important;opacity:.6;  }
                         #loader { display: block; top: 0; }
@@ -96,7 +105,7 @@ echo json_encode([
                                     </ul> 
                                 </md-content>
                             </md-sidenav>
-                            <div class="d-header">
+                            <div class="d-header panel-header">
                                 <div class="d-header_info">
                                     <div class="container-fluid">
                                         <div class="col-xs-12 col-sm-2 col-md-1 col-lg-1 d-logo col-lg-offset-1 logo-circle">
@@ -118,23 +127,24 @@ echo json_encode([
 
                                                 <div class="dropdown">
                                                     <md-button class="style-button" type="button" data-toggle="dropdown">
-                                                    <img src="{{url('')}}/assets/images/father.jpg" class="menu-icon img-responsive" alt=""> 
-                                                        HI, {{Auth::user()->fname}} 
+                                                        <img src="{{url('')}}/assets/images/father.jpg" class="menu-icon img-responsive" alt=""> 
+                                                            HI, {{Auth::user()->fname}} 
                                                             &nbsp;<i class="fa fa-chevron-down"></i></md-button>
-                                                        <ul class="dropdown-menu"> 
-                                                            <li style="background-color: #d0d0d0"><a>[ System Admin ]</a></li>
-                                                            <li ><a href="user_profile.html">
-                                                                    <i class="fa fa-edit"></i> &nbsp; Edit Profile</a></li> 
-                                                            <li><a href="change_password.html">
-                                                                    <i class="fa fa-lock"></i> &nbsp; &nbsp;Change Password</a></li> 
-                                                            <li><a href="{{ url('/logout')}}"
-                                                                   onclick="event.preventDefault();
-                                                                                               document.getElementById('logout-form').submit();">
-                                                                    <i class="fa fa-sign-out"></i> &nbsp;       Logout
-                                                                </a><form id="logout-form" action="{{ url('/logout')}}" method="POST" style="display: none;">
-                                                                    {{ csrf_field()}}
-                                                                </form></li> 
-                                                        </ul>
+                                                    <ul class="dropdown-menu"> 
+                                                        <li style="background-color: #d0d0d0"><a>[ System Admin ]</a></li>
+                                                        <li ><a href="user_profile.html">
+                                                                <i class="fa fa-edit"></i> &nbsp; Edit Profile</a></li> 
+                                                        <li><a href="change_password.html">
+                                                                <i class="fa fa-lock"></i> &nbsp; &nbsp;Change Password</a></li> 
+                                                        <li><a href="{{ url('/logout')}}"
+                                                               onclick="event.preventDefault();
+                                                                                           document.getElementById('logout-form').submit();">
+                                                                <i class="fa fa-sign-out"></i> &nbsp;       Logout
+                                                            </a><form id="logout-form" action="{{ url('/logout')}}" method="POST" style="display: none;">
+                                                                {{ csrf_field()}}
+                                                            </form>
+                                                        </li> 
+                                                    </ul>
                                                 </div>
                                                 <span class="d-notification_icon" ng-click="openRightMenu()">
                                                     <i class="fa fa-bell" aria-hidden="true"></i>
@@ -162,11 +172,10 @@ echo json_encode([
                                                             <md-menu-bar>
                                                                 <md-menu>
                                                                     <md-button class="dropdown-toggle style-menu-button" data-toggle="dropdown" ng-click="$mdOpenMenu()"><i class="fa fa-file-o"></i> &nbsp; Academics <b class="caret"></b></md-button>
-                                                                    
                                                                     <md-menu-content>           
                                                                         <md-menu-item>
                                                                             <md-menu>
-                                                                                
+
                                                                                 <a class="md-button" ng-click="$mdOpenMenu()">Time Table</a>
                                                                                 <md-menu-content>
                                                                                     <md-menu-item><a class="md-button" href="{{url('/timetable_season_group')}}">Timetable Date Range</a></md-menu-item>
@@ -252,9 +261,11 @@ echo json_encode([
                                                             </ul>
                                                         </li>
                                                         <li> 
-                                                           <md-button class="dropdown-toggle style-menu-button" data-toggle="dropdown"><i class="fa fa-wrench"></i>  &nbsp; Admin &nbsp;<b class="caret"></b></md-button>
+                                                            <md-button class="dropdown-toggle style-menu-button" data-toggle="dropdown"><i class="fa fa-wrench"></i>  &nbsp; Admin &nbsp;<b class="caret"></b></md-button>
                                                             <ul class="dropdown-menu">
                                                                 <li><a href="verifiy_marks">Verify Marks</a></li>
+                                                                <li><a href="verify_student_registration">Student Registration</a></li>
+                                                                <li><a href="set_syllabus">Set Syllabus</a></li>
                                                             </ul>
                                                         </li>
                                                         <!-- <li> 
@@ -345,6 +356,7 @@ echo json_encode([
                         <script type="text/javascript" src="{{url('')}}/assets/js/bootstrap-timepicker.min.js"></script>
                         <script type="text/javascript" src="{{url('')}}/assets/js/controller_examination.js"></script>
                         <script type="text/javascript" src="{{url('')}}/assets/tinymce/js/tinymce/tinymce.min.js"></script>
+                        <script type="text/javascript" src="{{url('')}}/assets/js/controller_dashboard.js"></script>
 
 
 
